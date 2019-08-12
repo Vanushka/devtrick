@@ -1,0 +1,68 @@
+#contacts {
+  position: relative;
+}
+.contacts-body {
+  width: 100%;
+  height: 100%;
+  background: rgba(32, 31, 36, 0.74);
+}
+
+.text-contacts {
+  padding-top: 38px;
+  margin-left: 86px;
+  display: grid;
+  grid-template-areas: "first second" "third third";
+  grid-template-rows: auto;
+  grid-template-columns: 350px 350px;
+}
+
+.first {
+  grid-area: first;
+}
+
+.first p {
+  margin: 0;
+  font-family: "CeraPro";
+  font-size: 16px;
+  line-height: 61px;
+  text-transform: lowercase;
+  color: #939393;
+}
+
+.first a {
+  font-family: "CeraPro-Bold";
+  font-size: 28px;
+  line-height: 36px;
+  color: #FFFFFF;
+}
+.second {
+  grid-area: second;
+  align-items: self-end;
+  display: grid;
+}
+
+.second a {
+  font-family: "CeraPro-Bold";
+  font-size: 28px;
+  line-height: 36px;
+  color: #FFFFFF;
+}
+
+.third {
+  grid-area: third;
+  margin-top: 25px;
+}
+
+.third p {
+  font-family: "CeraPro-Bold";
+  font-size: 18px;
+  line-height: 34px;
+  color: #FFFFFF;
+}
+
+.third span {
+  font-family: "CeraPro";
+  font-size: 18px;
+  line-height: 34px;
+  color: #FFFFFF;
+}

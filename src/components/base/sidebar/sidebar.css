@@ -1,0 +1,15 @@
+.sidebar {
+  width: 45px;
+  height: 315px;
+  margin-top: 75px;
+  margin-right: 15px;
+  grid-area: sidebar;
+  display: grid;
+  justify-self: end;
+}
+
+.sidebar a {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,5 +1,26 @@
+@import "fonts.css" screen;
+
 body {
   margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  height: 100%;
 }
+
+p {
+  font-family: 'CeraPro-Light';
+  font-size: 22px;
+  line-height: 28px;
+  color: #000000;
+}
+
+span {
+  font-family: 'CeraPro';
+  font-size: 14px;
+  line-height: 14px;
+  color: #939393;
+}
+
+.white {
+  color: #ffffff;
+}
+
+@import "media.css";

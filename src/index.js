@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import './App.scss';
+import { AppContainer } from 'react-hot-loader';
 
+import './index.css';
+
+import RouterRoot from './router/router';
 ReactDOM.render(
-  <App />,
+  <AppContainer>
+    <RouterRoot />
+  </AppContainer>,
   document.getElementById('root')
 );

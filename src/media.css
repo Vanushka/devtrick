@@ -1,0 +1,8 @@
+@media screen and (max-device-width: 1375px) {
+  .content .images-banner img {
+    width: 450px;
+  }
+  .content .links {
+    margin-top: 27px;
+  }
+}

@@ -1,0 +1,63 @@
+
+@font-face {
+  font-family: 'CeraPro';
+  src: url("./fonts/CeraPro-Thin.eot");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CeraPro';
+  src: url("./fonts/CeraPro-Thin.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CeraPro';
+  src: url("./fonts/CeraPro-Thin.woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CeraPro-Light';
+  src: url("./fonts/CeraPro-Light.eot");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CeraPro-Light';
+  src: url("./fonts/CeraPro-Light.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CeraPro-Light';
+  src: url("./fonts/CeraPro-Light.woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CeraPro-Bold';
+  src: url("./fonts/CeraPro-Bold.eot");
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'CeraPro-Bold';
+  src: url("./fonts/CeraPro-Bold.ttf");
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'CeraPro-Bold';
+  src: url("./fonts/CeraPro-Bold.woff");
+  font-weight: 700;
+  font-style: bold;
+}

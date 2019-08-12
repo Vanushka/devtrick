@@ -3,12 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ap.cx/react-fullpage": "^0.1.10-alpha",
+    "@fullpage/react-fullpage": "^0.1.15",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "0.9.5"
+    "react-full-page": "^0.1.7",
+    "react-hot-loader": "^4.12.9",
+    "react-page-scroller": "^1.5.1",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1",
+    "react-router-hash-link": "^1.2.2",
+    "react-scoped-styles": "^0.2.81",
+    "react-scripts": "0.9.5",
+    "react-scroll-wheel-handler": "^1.0.9"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "react-svg-loader": "^3.0.3"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

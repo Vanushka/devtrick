@@ -1,0 +1,77 @@
+header {
+  grid-area: header;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 17% 1fr 15%;
+}
+
+header .logo {
+  display: grid;
+  justify-content: end;
+}
+
+header ul {
+  display: grid;
+  padding-inline-start: 8%;
+  padding-inline-end: 8%;
+  justify-content: space-around;
+  grid-template-columns: repeat(5, auto);
+}
+
+header ul li {
+  list-style-type: none;
+}
+
+header ul li a {
+  font-family: "CeraPro";
+  font-size: 16px;
+  line-height: 36px;
+  color: #000000;
+}
+
+header ul li a:hover {
+  border-bottom: 2px solid #000000;
+}
+
+header ul li a.white,
+header ul li a.active.white {
+  color: #ffffff !important;
+}
+
+header ul li a.active.white,
+header ul li a.white:hover {
+  border-bottom: 2px solid #ffffff;
+}
+
+header ul li a.active {
+  font-family: "CeraPro-Bold";
+  border-bottom: 2px solid #000000;
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+header .contacts_menu {
+  display: grid;
+}
+
+header .contacts_menu span {
+  margin-left: 35px;
+  font-family: "CeraPro";
+  font-size: 11px;
+  line-height: 11px;
+  text-transform: lowercase;
+  color: #939393;
+}
+
+header .contacts_menu a {
+  margin-top: 10px;
+  font-family: "CeraPro";
+  font-size: 18px;
+  line-height: 18px;
+  color: #000000;
+}
+
+header .contacts_menu a.white {
+  color: #ffffff;
+}

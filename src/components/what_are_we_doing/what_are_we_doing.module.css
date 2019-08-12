@@ -1,0 +1,72 @@
+#what_are_we_doing {
+  height: 50vw; 
+}
+
+.examples {
+  width: 86.3%;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
+}
+
+.example {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-size: 15vw;
+  text-align: center;
+  background-color: #3B3940;
+}
+
+.spetial {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-gap: 28px;
+  position: relative;
+  font-size: 15vw;
+  text-align: left;
+  align-items: center;
+  grid-template-columns: 20% 1fr;
+  background-color: #00A3FF;
+}
+
+.spetial .text p {
+  color: #ffffff;
+  font-size: 9%;
+  font-family: 'CeraPro-Bold';
+}
+
+.spetial .special_icon {
+  height: -webkit-fill-available;
+  margin-left: 28px;
+}
+
+.spetial .special_icon img {
+  margin-top: 26px;
+  position: absolute;
+}
+
+.example .text p{
+  color: #ffffff;
+  text-align: left;
+  font-size: 10%;
+  line-height: 1.5vw;
+  margin-left: 28px;
+  margin-right: 28px;
+}
+
+.example .icons {
+  width: 37%;
+  display: grid;
+  grid-gap: 20%;
+  align-items: center;
+  margin-left: 28px;
+  grid-template-columns: 32% 41%;
+  margin-bottom: 25px;
+}
+
+.example .icons img {
+  width: 100%;
+}
