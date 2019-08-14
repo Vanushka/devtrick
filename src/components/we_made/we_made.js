@@ -26,130 +26,99 @@ import cvz_logo from './img/png/cvz_logo.png';
 import carryfood from './img/png/carryfood.png';
 import carryfood_logo from './img/png/carryfood_logo.png';
 
+import './projects.css';
 class We_made extends React.Component {
-  render () {
+  state = {
+    projects: [
+      {
+        name: 'vpbank',
+        title: 'VPBank Vietnam',
+        type: 'Мобильное приложение',
+        logo: logo,
+        style: 'VpBank',
+        feat: false,
+      },
+      {
+        name: 'spbbank',
+        title: 'Мобильная котировальная доска (Банк Санкт-Петербурга)',
+        type: 'Мобильное приложение',
+        logo: logo_bank,
+        style: 'SpbBank',
+        feat: false,
+      },
+      {
+        name: 'prodel',
+        title: 'Prodel - сервис доставки продуктов в Азербайджане',
+        type: 'Мобильное приложение',
+        logo: prodel_logo,
+        style: 'Prodel',
+        feat: false,
+      },
+      {
+        name: 'seagent',
+        title: 'SeAgent - сервис бронирования стояночных мест для яхт',
+        type: 'Мобильное приложение',
+        logo: seagentLogo,
+        style: 'Seagent',
+        feat: false,
+      },
+      {
+        name: 'rr_mob',
+        title: 'Русское Радио',
+        type: 'Мобильное приложение',
+        logo: rr_logo,
+        style: 'RusRadioMobile',
+        feat: true,
+      },
+      {
+        name: 'rr',
+        title: 'Русское Радио',
+        type: 'Сайт',
+        logo: rr_logo,
+        style: 'RusRadio',
+        feat: true,
+      },
+      {
+        name: 'dfm_mob',
+        title: 'DFM - dance radio',
+        type: 'Мобильное приложение',
+        logo: dfm_logo,
+        style: 'DfmMobile',
+        feat: true,
+      },
+      {
+        name: 'dfm',
+        title: 'DFM - dance radio',
+        type: 'Сайт',
+        logo: dfm_logo,
+        style: 'Dfm',
+        feat: true,
+      },
+    ],
+  };
+  render() {
+    const projects = this.state.projects.map(prj => (
+      <NavLink className={'product ' + prj.style} to={'/we_made/' + prj.name}>
+        <div className="text">
+          <p>{prj.title}</p>
+          <span>{prj.type}</span>
+          {prj.feat ? <img src={feat} alt="logo" /> : null}
+        </div>
+        <div className="logo_product">
+          <img src={prj.logo} alt="logo" />
+        </div>
+      </NavLink>
+    ));
     return (
       <div id="we_made">
         <h1>Что мы сделали</h1>
         <div className="products">
-          <NavLink className="product" to='/we_made/vpbank' style={{ backgroundImage: `url(${ vpbank })` }}>
-            <div className="text">
-              <p>VPBank Vietnam</p>
-              <span>Мобильное приложение</span>
-            </div>
-            <div className="logo_product">
-              <img src={logo} alt="logo" />
-            </div>
-          </NavLink>
-          <NavLink className="product" to='/we_made/spbbank' style={{ backgroundImage: `url(${ moscow_bank })` }} >
-            <div className="text">
-              <p>Мобильная котировальная доска (Банк Санкт-Петербурга)</p>
-              <span>Мобильное приложение</span>
-            </div>
-            <div className="logo_product">
-              <img src={logo_bank} alt="logo" />
-            </div>
-          </NavLink>
-          <NavLink className="product" to='/we_made/prodel' style={{ backgroundImage: `url(${ prodel })` }} >
-            <div className="text">
-              <p>Prodel - сервис доставки продуктов в Азербайджане</p>
-              <span>Мобильное приложение</span>
-            </div>
-            <div className="logo_product">
-              <img src={prodel_logo} alt="logo" />
-            </div>
-          </NavLink>
-          <NavLink className="product" to='/we_made/seagent' style={{ backgroundImage: `url(${ seagent })` }} >
-            <div className="text">
-              <p>SeAgent - сервис бронирования стояночных мест для яхт</p>
-              <span>Мобильное приложение</span>
-            </div>
-            <div className="logo_product">
-              <img src={seagentLogo} alt="logo" />
-            </div>
-          </NavLink>
-          <NavLink className="product" to='/we_made/rr_mob' style={{ backgroundImage: `url(${ rr })` }} >
-            <div className="text">
-              <p>Русское Радио</p>
-              <span>Мобильное приложение</span>
-              <img src={feat} alt="logo" />
-            </div>
-            <div className="logo_product">
-              <img src={rr_logo} alt="logo" />
-            </div>
-          </NavLink>
-          <NavLink className="product" to='/we_made/rr' style={{ backgroundImage: `url(${ rr_desc })` }} >
-            <div className="text">
-              <p>Русское Радио</p>
-              <span>Сайт</span>
-              <img src={feat} alt="logo" />
-            </div>
-            <div className="logo_product">
-              <img src={rr_logo} alt="logo" />
-            </div>
-          </NavLink>
-          <NavLink className="product" to='/we_made/dfm_mob' style={{ backgroundImage: `url(${ galantis })` }} >
-            <div className="text">
-              <p>DFM - dance radio</p>
-              <span>Мобильное приложение</span>
-              <img src={feat} alt="logo" />
-            </div>
-            <div className="logo_product">
-              <img src={dfm_logo} alt="logo" />
-            </div>
-          </NavLink>
-          <NavLink className="product" to='/we_made/dfm' style={{ backgroundImage: `url(${ dfm })` }} >
-            <div className="text">
-              <p>DFM - dance radio</p>
-              <span>Сайт</span>
-              <img src={feat} alt="logo" />
-            </div>
-            <div className="logo_product">
-              <img src={dfm_logo} alt="logo" />
-            </div>
-          </NavLink>
-          <NavLink className="product" to='/we_made/montecarlo_mob' style={{ backgroundImage: `url(${ mc })` }} >
-            <div className="text">
-              <p>Radio Monte Carlo</p>
-              <span>Мобильное приложение</span>
-              <img src={feat} alt="logo" />
-            </div>
-            <div className="logo_product">
-              <img src={mc_logo} alt="logo" />
-            </div>
-          </NavLink>
-          <NavLink className="product" to='/we_made/montecarlo' style={{ backgroundImage: `url(${ scachki })` }} >
-            <div className="text">
-              <p>Radio Monte Carlo</p>
-              <span>Сайт</span>
-              <img src={feat} alt="logo" />
-            </div>
-            <div className="logo_product">
-              <img src={mc_logo} alt="logo" />
-            </div>
-          </NavLink>
-          <NavLink className="product" to='/we_made/dcc' style={{ backgroundImage: `url(${ cvz })` }} >
-            <div className="text">
-              <p>Центр взыскания задолженности</p>
-              <span>Сайт</span>
-              <img src={feat} alt="logo" />
-            </div>
-            <div className="logo_product">
-              <img src={cvz_logo} alt="logo" />
-            </div>
-          </NavLink>
-          <NavLink className="product" to='/we_made/nesuedu' style={{ backgroundImage: `url(${ carryfood })` }} >
-            <div className="text">
-              <p>НесуЕду - сервис доставки продуктов из супермаркетов</p>
-              <span>Мобильное приложение</span>
-              <img src={feat} alt="logo" />
-            </div>
-            <div className="logo_product">
-              <img src={carryfood_logo} alt="logo" />
-            </div>
-          </NavLink>
+          {projects}
           <a className="product submit_your_app">
-            <p>Оставить заявку <br />на проект</p>
+            <p>
+              Оставить заявку <br />
+              на проект
+            </p>
           </a>
         </div>
       </div>
