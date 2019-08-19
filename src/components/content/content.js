@@ -1,6 +1,10 @@
 import React from 'react';
 
+import ModalExampleCloseIcon from '../modalform/modalform';
+
+
 import './content.css';
+import './media.css';
 
 import image from './img/png/phones.png';
 
@@ -23,7 +27,7 @@ class Content extends React.Component {
             <p>аккуратно и во время</p>
           </div>
           <div className="links">
-            <a href="#">Оставить заявку</a>
+            <ModalExampleCloseIcon />
             <a href="#">Узнать примерную стоимость</a>
           </div>
           <div className="images-banner">

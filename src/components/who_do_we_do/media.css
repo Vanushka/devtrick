@@ -1,0 +1,19 @@
+@media screen and (max-device-width: 767px) {
+  #who_do_we_do h1 {
+    font-size: 34px;
+    line-height: 61px;
+    margin-left: 5%;
+  }
+  .logos_company {
+    width: 100%;
+    grid-gap: 0;
+    height: max-content;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .logo_company {
+    height: 35vw;
+  }
+  .logo_company img {
+    width: 100%;
+  }
+}

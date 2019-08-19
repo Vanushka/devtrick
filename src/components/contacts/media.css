@@ -1,0 +1,21 @@
+@media screen and (max-device-width: 767px) {
+  #contacts {
+    margin-top: 20px;
+  }
+  #contacts h1 {
+    margin-left: 5%;
+  }
+  .contacts-body {
+    background: none;
+  }
+  .text-contacts {
+    padding-top: 0;
+    margin-left: 0;
+    justify-content: center;
+    grid-template-areas: "first" "second" "third";
+    grid-template-columns: 90%;
+  }
+  .third p {
+    margin: 0;
+  }
+}

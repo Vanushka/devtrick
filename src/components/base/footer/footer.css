@@ -1,9 +1,9 @@
 footer {
-  width: 100%;
+  width: auto;
   height: 70px;
   align-items: center;
   grid-area: footer;
-  display: grid;
+  display: grid !important;
   justify-content: end;
 }
 

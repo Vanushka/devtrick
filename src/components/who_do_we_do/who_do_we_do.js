@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './who_do_we_do.css';
+import './media.css';
 
 import vpbank_plus from './img/png/VPBank-plus.png';
 import bank_spb from './img/png/bank_spb.png';

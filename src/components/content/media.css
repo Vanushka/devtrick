@@ -1,0 +1,31 @@
+@media screen and (max-device-width: 767px) {
+  .content {
+    height: 728px;
+    background-image: url("img/png/main_banner_mob.png") !important;
+  }
+  .content .inside-container {
+    width: 90%;
+    padding: 0;
+    padding-top: 37px;
+    margin: 0 auto;
+  }
+  .content .inside-container .text h1 {
+    font-size: 42px;
+    line-height: 36px;
+  }
+  .content .inside-container .text span {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .content .inside-container .images-banner {
+    display: none;
+  }
+  .content .inside-container .links {
+    max-width: 100%;
+    margin-top: 80%;
+    grid-template-columns: none;
+  }
+  .content .inside-container .links a {
+    width: 100% !important;
+  }
+}

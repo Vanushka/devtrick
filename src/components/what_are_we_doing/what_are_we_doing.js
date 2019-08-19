@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './what_are_we_doing.module.css'
+import './media.css'
 
 import apple from './img/svg/apple.svg';
 import android from './img/svg/android.svg';

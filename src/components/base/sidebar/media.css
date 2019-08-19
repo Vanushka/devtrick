@@ -1,0 +1,12 @@
+@media screen and (max-device-width: 767px) {
+  .sidebar {
+    width: 80%;
+    height: 58px;
+    margin-top: 30px;
+    justify-self: center;
+  }
+  .sidebar .side-block {
+    height: 100%;
+    grid-template-columns: 7% 7% 7% 7%;
+  }
+}

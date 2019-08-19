@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BrowserRouter as Routes, browserHistory,  Route } from 'react-router-dom';
+import { BrowserRouter as Routes,  Route } from 'react-router-dom';
 
 import './container.css'
 
@@ -16,7 +16,7 @@ import Item from '../item/item';
 class Container extends React.Component {
   render () {
     return (
-      <Routes location='hashHystory'>
+      <Routes location='hash'>
         <div className="container">
           <Route path='/' exact component={Content} />
           <Route path='/we_made' exact component={We_made} />

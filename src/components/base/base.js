@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './base.css';
+import './media.css';
 
 import Header from './header/header';
 import Sidebar from './sidebar/sidebar';
@@ -12,6 +13,7 @@ import what_are_we_doing from './img/backgrounds/what_are_we_doing.jpg';
 import who_do_we_do from './img/backgrounds/who_do_we_do.jpg';
 import blog from './img/backgrounds/blog.jpg';
 import contacts from './img/backgrounds/contacts.jpg';
+import contacts_mob_back from './img/backgrounds/contacts_mob_back.jpg';
 
 import up from './img/svg/up.svg';
 import slash from './img/svg/slash.svg';
@@ -27,7 +29,14 @@ class Base extends React.Component {
     function getBackground(pathnames, backgrounds) {
       for (var i = 0; i < backgrounds.length; i++) {
         if (location.pathname === pathnames[i]) {
-          return backgrounds[i];
+          if (location.pathname !== "/contacts") {
+            return backgrounds[i];
+          } else if (location.pathname === '/contacts'){
+            if (window.innerWidth < 768) {
+              return backgrounds = contacts_mob_back;
+            }
+            return backgrounds[i];
+          }
         }
       }
     }

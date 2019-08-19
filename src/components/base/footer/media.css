@@ -1,0 +1,9 @@
+@media screen and (max-device-width: 767px) {
+  footer {
+    padding: 0;
+    justify-content: center;
+  }
+  footer .copyright {
+    margin-right: 0;
+  }
+}

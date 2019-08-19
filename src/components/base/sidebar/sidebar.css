@@ -1,14 +1,37 @@
 .sidebar {
-  width: 45px;
-  height: 315px;
+  /* width: 45px; */
+  height: 553px;
   margin-top: 75px;
-  margin-right: 15px;
   grid-area: sidebar;
   display: grid;
   justify-self: end;
 }
 
-.sidebar a {
+.sidebar .communication {
+  height: 58px;
+  width: 58px;
+  display: none;
+  align-items: center;
+  white-space: nowrap;
+  font-family: "CeraPro-Medium";
+  font-size: 16px;
+  line-height: 36px;
+  color: #000000;
+  transform: rotate(-90deg);
+}
+
+.sidebar .active {
+  display: grid;
+}
+
+.sidebar .side-block {
+  height: 315px;
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar .side-block a {
   display: grid;
   align-items: center;
   justify-content: center;

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './contacts.css'
+import './media.css'
 
 class Contacts extends React.Component {
   render () {

@@ -1,0 +1,41 @@
+@media screen and (max-device-width: 767px) {
+  header {
+    padding: 0;
+    height: 77px;
+    width: 90%;
+    margin: 0 auto;
+    grid-template-columns: 11% 35% 1fr;
+  }
+
+  header .burger {
+    display: block;
+  }
+  .logo {
+    justify-content: center !important;
+  }
+  .logo a {
+    width: 114px;
+    height: 39px;
+  }
+
+  .logo a img {
+    width: 100%;
+  }
+
+  .links {
+    display: none;
+  }
+  header .contacts_menu {
+    justify-content: end;
+  }
+  header .contacts_menu span {
+    font-size: 11px;
+    line-height: 11px;
+    margin-left: 20px;
+  }
+  header .contacts_menu a {
+    font-size: 16px;
+    line-height: 18px;
+    margin-top: 5px;
+  }
+}

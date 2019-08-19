@@ -9,7 +9,6 @@
   display: grid;
   padding-top: 8%;
   padding-left: 7%;
-  padding-left: 7%;
   grid-template-rows: auto 1fr;
   grid-template-areas:
   "text img"
@@ -70,6 +69,7 @@
   font-size: 16px;
   line-height: 16px;
   align-items: center;
+  cursor: pointer;
   justify-content: center;
   font-family: "CeraPro-Bold";
 }
