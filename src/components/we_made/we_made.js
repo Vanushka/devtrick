@@ -1,6 +1,8 @@
 import React from 'react';
-
+import { connect } from 'react-redux';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
+
+import * as actions from '../../store/actions/projects';
 
 import './we_made.css';
 import feat from './img/jpg/feat.jpg';
@@ -28,77 +30,87 @@ import carryfood_logo from './img/png/carryfood_logo.png';
 
 import './projects.css';
 class We_made extends React.Component {
-  state = {
-    projects: [
-      {
-        name: 'vpbank',
-        title: 'VPBank Vietnam',
-        type: 'Мобильное приложение',
-        logo: logo,
-        style: 'VpBank',
-        feat: false,
-      },
-      {
-        name: 'spbbank',
-        title: 'Мобильная котировальная доска (Банк Санкт-Петербурга)',
-        type: 'Мобильное приложение',
-        logo: logo_bank,
-        style: 'SpbBank',
-        feat: false,
-      },
-      {
-        name: 'prodel',
-        title: 'Prodel - сервис доставки продуктов в Азербайджане',
-        type: 'Мобильное приложение',
-        logo: prodel_logo,
-        style: 'Prodel',
-        feat: false,
-      },
-      {
-        name: 'seagent',
-        title: 'SeAgent - сервис бронирования стояночных мест для яхт',
-        type: 'Мобильное приложение',
-        logo: seagentLogo,
-        style: 'Seagent',
-        feat: false,
-      },
-      {
-        name: 'rr_mob',
-        title: 'Русское Радио',
-        type: 'Мобильное приложение',
-        logo: rr_logo,
-        style: 'RusRadioMobile',
-        feat: true,
-      },
-      {
-        name: 'rr',
-        title: 'Русское Радио',
-        type: 'Сайт',
-        logo: rr_logo,
-        style: 'RusRadio',
-        feat: true,
-      },
-      {
-        name: 'dfm_mob',
-        title: 'DFM - dance radio',
-        type: 'Мобильное приложение',
-        logo: dfm_logo,
-        style: 'DfmMobile',
-        feat: true,
-      },
-      {
-        name: 'dfm',
-        title: 'DFM - dance radio',
-        type: 'Сайт',
-        logo: dfm_logo,
-        style: 'Dfm',
-        feat: true,
-      },
-    ],
+  // state = {
+  //   projects: [
+  //     {
+  //       name: 'vpbank',
+  //       title: 'VPBank Vietnam',
+  //       type: 'Мобильное приложение',
+  //       logo: logo,
+  //       style: 'VpBank',
+  //       feat: false,
+  //     },
+  //     {
+  //       name: 'spbbank',
+  //       title: 'Мобильная котировальная доска (Банк Санкт-Петербурга)',
+  //       type: 'Мобильное приложение',
+  //       logo: logo_bank,
+  //       style: 'SpbBank',
+  //       feat: false,
+  //     },
+  //     {
+  //       name: 'prodel',
+  //       title: 'Prodel - сервис доставки продуктов в Азербайджане',
+  //       type: 'Мобильное приложение',
+  //       logo: prodel_logo,
+  //       style: 'Prodel',
+  //       feat: false,
+  //     },
+  //     {
+  //       name: 'seagent',
+  //       title: 'SeAgent - сервис бронирования стояночных мест для яхт',
+  //       type: 'Мобильное приложение',
+  //       logo: seagentLogo,
+  //       style: 'Seagent',
+  //       feat: false,
+  //     },
+  //     {
+  //       name: 'rr_mob',
+  //       title: 'Русское Радио',
+  //       type: 'Мобильное приложение',
+  //       logo: rr_logo,
+  //       style: 'RusRadioMobile',
+  //       feat: true,
+  //     },
+  //     {
+  //       name: 'rr',
+  //       title: 'Русское Радио',
+  //       type: 'Сайт',
+  //       logo: rr_logo,
+  //       style: 'RusRadio',
+  //       feat: true,
+  //     },
+  //     {
+  //       name: 'dfm_mob',
+  //       title: 'DFM - dance radio',
+  //       type: 'Мобильное приложение',
+  //       logo: dfm_logo,
+  //       style: 'DfmMobile',
+  //       feat: true,
+  //     },
+  //     {
+  //       name: 'dfm',
+  //       title: 'DFM - dance radio',
+  //       type: 'Сайт',
+  //       logo: dfm_logo,
+  //       style: 'Dfm',
+  //       feat: true,
+  //     },
+  //   ],
+  // };
+  navClickedHandler = (event, projectId, name) => {
+    console.log(projectId);
+    this.props.onProjectChosen(projectId);
+    this.props.history.push('/we_made/' + name);
   };
   render() {
-    const projects = this.state.projects.map(prj => (
-      <NavLink className={'product ' + prj.style} to={'/we_made/' + prj.name}>
+    const projects = this.props.projects.map(prj => (
+      <div
+        key={prj.id}
+        className={'product ' + prj.style}
+        to={'/we_made/' + prj.name}
+        onClick={() => this.navClickedHandler(event, prj.id, prj.name)}
+      >
         <div className="text">
           <p>{prj.title}</p>
           <span>{prj.type}</span>
@@ -107,7 +119,7 @@ class We_made extends React.Component {
         <div className="logo_product">
           <img src={prj.logo} alt="logo" />
         </div>
-      </NavLink>
+      </div>
     ));
     return (
       <div id="we_made">
@@ -126,4 +138,21 @@ class We_made extends React.Component {
   }
 }
 
-export default We_made;
+const mapStateToProps = state => {
+  return {
+    projects: state.projects,
+    error: state.error,
+  };
+};
+
+// prettier-ignore
+const mapDispatchToProps = dispatch => {
+  return {
+    onProjectChosen: projectId => dispatch(actions.setCurrentProject(projectId)),
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(We_made);

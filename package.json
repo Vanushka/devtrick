@@ -13,12 +13,14 @@
     "react-full-page": "^0.1.7",
     "react-hot-loader": "^4.12.9",
     "react-page-scroller": "^1.5.1",
+    "react-redux": "^7.1.0",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-router-hash-link": "^1.2.2",
     "react-scoped-styles": "^0.2.81",
     "react-scripts": "0.9.5",
-    "react-scroll-wheel-handler": "^1.0.9"
+    "react-scroll-wheel-handler": "^1.0.9",
+    "redux": "^4.0.4"
   },
   "devDependencies": {
     "react-svg-loader": "^3.0.3"
