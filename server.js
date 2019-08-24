@@ -26,18 +26,16 @@ app.post('/contact', (req, res) => {
       <li>Почта: ${cForm.email}</li>
       <li>Телефон: ${cForm.phone}</li>
     </ul>
-    <h3>Сообщение</h3>
-    <p>${cForm.message}</p>
   `;
 
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      port: 587,
-      secure: false, // true for 465, false for other ports
+      host: 'smtp.yandex.ru',
+      port: 465,
+      secure: true, // true for 465, false for other ports
       auth: {
-          user: 'spqk1319@gmail.com', // generated ethereal user
-          pass: '***************' // generated ethereal password
+          user: 'YOUR_EMAIL', // generated ethereal user
+          pass: 'YOUR_PASSWORD' // generated ethereal password
       },
       tls:{
         rejectUnauthorized:false
@@ -46,9 +44,9 @@ app.post('/contact', (req, res) => {
 
   // setup email data with unicode symbols
   let mailOptions = {
-      from: '"Сообщение от:" <spqk1319@gmail.com>', // sender address
-      to: 'spqk1319@gmail.com', // list of receivers
-      subject: 'Сообщение с сайта rezyltat.com', // Subject line
+      from: '"Сообщение от:" <YOUR_EMAIL>', // sender address
+      to: 'YOUR_EMAIL', // list of receivers
+      subject: 'Сообщение с сайта devtrick.com', // Subject line
       text: 'Hello world?', // plain text body
       html: output // html body
   };
@@ -57,7 +55,7 @@ app.post('/contact', (req, res) => {
       if (error) {
           return console.log(error);
       }
-      console.log('Message sent: %s', 'spqk1319@gmail.com');
+      console.log('Message sent: %s', 'YOUR_EMAIL');
       console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
       // res.render('contact', {msg: 'Спасибо, Ваша заявка принята. В скором времени наши менеджеры свяжутся с Вами.'});
   });

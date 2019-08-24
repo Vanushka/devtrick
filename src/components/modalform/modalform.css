@@ -4,6 +4,7 @@
 }
 
 .ui.modal>.content {
+  height: 660px;
   background-image: url("./img/modal_back.jpg");
 }
 
@@ -50,14 +51,52 @@
   grid-area: right;
 }
 
+.ui.form .field:nth-child(2)>label {
+  margin-top: -16px;
+  font-family: "CeraPro";
+  font-size: 10px;
+  line-height: 16px;
+}
+
 .ui.form .field:nth-child(3) {
   grid-area: left;
   margin-top: 72px;
 }
 
+.ui.input input::placeholder {
+  font-family: "CeraPro-Bold";
+  font-size: 16px;
+  line-height: 16px;
+  color: #000000;
+}
+
 .ui.form input {
   border: none !important;
   background: none !important;
+}
+
+.ui.form .field .ui.input input, .ui.form .fields .field .ui.input input {
+  padding-left: 26px;
+}
+
+.ui.form .field {
+  display: flex;
+  align-items: center;
+}
+
+.ui.form .field>label {
+  margin: 0 0 0 26px;
+  position: absolute;
+  font-family: "CeraPro-Bold";
+  font-size: 16px;
+  line-height: 16px;
+  color: #000000;
+
+}
+
+
+.ui.form .required.field>label:after, .ui.form .required.fields.grouped>label:after, .ui.form .required.fields:not(.grouped)>.field>label:after {
+  display: none;
 }
 
 .ui.button {

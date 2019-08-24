@@ -1,30 +1,42 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import './item.css';
+import './media.css';
 
-import productLogo from './img/vpbank-plus.jpg'
+import productLogo from './img/vpbank-plus.jpg';
 
-import contept_img from './img/vp_bank_concept.png'
+import contept_img from './img/vp_bank_concept.png';
 
 class Item extends React.Component {
-  render () {
+  componentDidMount() {
+    console.log(this.props.currentProject);
+  }
+  render() {
     return (
       <div id="item" className="item-content">
         <div className="product-block">
           <div className="product-logo">
-            <img src={productLogo} />
+            <img src={this.props.currentProject.logo} />
           </div>
           <div className="info">
-            <p>VPBank Vietnam</p>
-            <span>Мобильное приложение</span>
+            <p>{this.props.currentProject.title}</p>
+            <span>{this.props.currentProject.type}</span>
           </div>
         </div>
         <div className="concept">
           <img src={contept_img} />
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default Item;
+const mapStateToProps = state => {
+  return {
+    currentProject: state.currentProject,
+    error: state.error,
+  };
+};
+
+export default connect(mapStateToProps)(Item);

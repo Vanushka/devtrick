@@ -2,6 +2,7 @@
   #we_made h1 {
     font-size: 34px;
     line-height: 61px;
+    margin-left: 5%;
   }
   .products {
     display: block !important;

@@ -1,17 +1,17 @@
 import React from 'react';
-import Slider from "react-slick";
-
+import { connect } from 'react-redux';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 
-import Item from '../item/item';
+import Slider from "react-slick";
 
-import Container from '../container/container';
-import './we_made.css';
-import './products.css';
-import './media.css';
+import ModalExampleCloseIcon from '../modalform/modalform';
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import * as actions from '../../store/actions/projects';
+
+import './we_made.css';
 import feat from './img/jpg/feat.jpg';
 import vpbank from './img/png/VPbank.png';
 import logo from './img/png/VPbankLogo.png';
@@ -35,176 +35,94 @@ import cvz_logo from './img/png/cvz_logo.png';
 import carryfood from './img/png/carryfood.png';
 import carryfood_logo from './img/png/carryfood_logo.png';
 
+import './projects.css';
 class We_made extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     autoplay: false,
-  //   };
-  // }
-  // sliderInit (windowSize) {
-  //   if (windowSize.windowWidth < 768) {
-  //     this.setState({
-  //       autoplay: true,
-  //     });
-  //   }
-  // }
-  constructor(props) {
-    super(props);
-    this.state = {
-      products: [
-        {
-          name: 'vpbank',
-          title: 'VPBank Vietnam',
-          type: 'Мобильное приложение',
-          logo: logo,
-          style: 'VpBank',
-          feat: false,
-        },
-        {
-          name: 'spbbank',
-          title: 'Мобильная котировальная доска (Банк Санкт-Петербурга)',
-          type: 'Мобильное приложение',
-          logo: logo_bank,
-          style: 'SpbBank',
-          feat: false,
-        },
-        {
-          name: 'prodel',
-          title: 'Prodel - сервис доставки продуктов в Азербайджане',
-          type: 'Мобильное приложение',
-          logo: prodel_logo,
-          style: 'Prodel',
-          feat: false,
-        },
-        {
-          name: 'seagent',
-          title: 'SeAgent - сервис бронирования стояночных мест для яхт',
-          type: 'Мобильное приложение',
-          logo: seagentLogo,
-          style: 'Seagent',
-          feat: false,
-        },
-        {
-          name: 'rr_mob',
-          title: 'Русское Радио',
-          type: 'Мобильное приложение',
-          logo: rr_logo,
-          style: 'RusRadioMobile',
-          feat: true,
-        },
-        {
-          name: 'rr',
-          title: 'Русское Радио',
-          type: 'Сайт',
-          logo: rr_logo,
-          style: 'RusRadio',
-          feat: true,
-        },
-        {
-          name: 'dfm_mob',
-          title: 'DFM - dance radio',
-          type: 'Мобильное приложение',
-          logo: dfm_logo,
-          style: 'DfmMobile',
-          feat: true,
-        },
-        {
-          name: 'dfm',
-          title: 'DFM - dance radio',
-          type: 'Сайт',
-          logo: dfm_logo,
-          style: 'Dfm',
-          feat: true,
-        },
-        {
-          name: 'mc_mob',
-          title: 'Radio Monte Carlo',
-          type: 'Мобильное приложение',
-          logo: mc_logo,
-          style: 'MonteCarlo',
-          feat: true,
-        },
-        {
-          name: 'mc',
-          title: 'Radio Monte Carlo',
-          type: 'Сайт',
-          logo: mc_logo,
-          style: 'MonteCarloSite',
-          feat: true,
-        },
-        {
-          name: 'cvz',
-          title: 'Центр взыскания задолженности',
-          type: 'Сайт',
-          logo: cvz_logo,
-          style: 'CVZ',
-          feat: false,
-        },
-        {
-          name: 'carryfood',
-          title: 'НесуЕду - сервис доставки продуктов из супермаркетов',
-          type: 'Мобильное приложение',
-          logo: carryfood_logo,
-          style: 'Carryfood',
-          feat: false,
-        }
-      ],
-    };
 
-  }
-
-  render () {
-    const products = this.state.products.map(product => (
-      <NavLink key={product.id} className={'product ' + product.style} to={'/we_made/' + product.name}>
+  navClickedHandler = (event, projectId, name) => {
+    console.log(projectId);
+    this.props.onProjectChosen(projectId);
+    this.props.history.push('/we_made/' + name);
+  };
+  render() {
+    const projects = this.props.projects.map(prj => (
+      <div
+        key={prj.id}
+        className={'product ' + prj.style}
+        to={'/we_made/' + prj.name}
+        onClick={() => this.navClickedHandler(event, prj.id, prj.name)}
+      >
         <div className="text">
-          <p>{product.title}</p>
-          <span>{product.type}</span>
-          {product.feat ? <img src={feat} alt="logo" /> : null}
+          <p>{prj.title}</p>
+          <span>{prj.type}</span>
+          {prj.feat ? <img src={feat} alt="logo" /> : null}
         </div>
         <div className="logo_product">
-          <img src={product.logo} alt="logo" />
+          <img src={prj.logo} alt="logo" />
         </div>
-      </NavLink>
+      </div>
     ));
 
-      let settings = {
-        arrows: false,
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      };
+    let settings = {
+      dots: true,
+      autoplay: true,
+      arrows: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
 
-      let slider = <div className="products">
-        {products}
-        <a className="product submit_your_app">
-          <p>
-            Оставить заявку <br />
-            на проект
-          </p>
-        </a>
-      </div>
+    if (window.innerWidth > 768) {
+      return (
+        <div id="we_made">
+          <h1>Что мы сделали</h1>
+          <div className="products">
+            {projects}
+            <a className="product submit_your_app">
+              <p>
+                <ModalExampleCloseIcon /> на проект
+              </p>
+            </a>
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <div id="we_made">
+          <h1>Что мы сделали</h1>
+          <div className="products">
+            <Slider {...settings}>
+              {projects}
+              <a className="product submit_your_app">
+                <p>
+                  Оставить заявку <br />
+                  на проект
+                </p>
+              </a>
+            </Slider>
+          </div>
+        </div>
+      );
+    }
 
-      if (window.innerWidth < 768) {
-        slider = <div className="products"><Slider {...settings}>{products}
-        <a className="product submit_your_app">
-          <p>
-            Оставить заявку <br />
-            на проект
-          </p>
-        </a></Slider></div>;
-        return slider;
-      }
-
-    return (
-      <div id="we_made">
-        <h1>Что мы сделали</h1>
-        {slider}
-      </div>
-    );
   }
 }
 
-export default We_made;
+const mapStateToProps = state => {
+  return {
+    projects: state.projects,
+    error: state.error,
+  };
+};
+
+// prettier-ignore
+const mapDispatchToProps = dispatch => {
+  return {
+    onProjectChosen: projectId => dispatch(actions.setCurrentProject(projectId)),
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(We_made);

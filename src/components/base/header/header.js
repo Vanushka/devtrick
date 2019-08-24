@@ -12,7 +12,14 @@ import logoWhite from './img/svg/logoWhite.svg';
 class Header extends React.Component {
   render () {
     let logo = location.pathname === "/what_are_we_doing" ? logoWhite : (location.pathname === "/contacts" ? logoWhite : logoStandart);
-
+    function changeColor() {
+      if (location.pathname === "/what_are_we_doing") {
+        var elementsBurger = document.getElementsByClassName('bm-burger-bars');
+          for (var i = 0; i < elementsBurger.length; i++) {
+            elementsBurger[i].style.background = "white";
+          }
+      }
+    }
     return (
       <header>
       <div className="burger">
@@ -64,7 +71,10 @@ class Header extends React.Component {
 
   componentDidMount() {
     if (location.pathname === "/what_are_we_doing" || location.pathname === "/contacts") {
-
+      var elementsBurger = document.getElementsByClassName('bm-burger-bars');
+        for (var i = 0; i < elementsBurger.length; i++) {
+          elementsBurger[i].style.background = "white";
+        }
       let links = document.getElementsByClassName('item');
         for (var i = 0; i < links.length; i++) {
           links[i].classList.add('white');

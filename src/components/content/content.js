@@ -20,7 +20,7 @@ class Content extends React.Component {
     };
 
     return (
-      <div id="content" className="content" style={sectionStyle}>
+      <div id="content" className="content-block" style={sectionStyle}>
         <div className="inside-container">
           <div className="text">
             <h1>Разработка мобильных приложений и web-сервисов</h1>

@@ -17,12 +17,12 @@ class Sidebar extends React.Component {
     return (
       <div className="sidebar">
         <div className="side-block">
-          <a href="#"><img src={telegram} alt="telegram" /></a>
+          <a target="_blank" href="http://t-do.ru/kuteshov"><img src={telegram} alt="telegram" /></a>
           <a href="#"><img src={discord} alt="discord" /></a>
           <a href="#"><img src={whatsup} alt="whatsup" /></a>
           <a href="#"><img src={viber} alt="viber" /></a>
         </div>
-        <a className={location.pathname === '/we_made' ? this.activeClass + " communication" : "communication"} href="#">Cвяжись с нами</a>
+        {/*<a className={location.pathname === '/we_made' ? this.activeClass + " communication" : "communication"} href="#">Cвяжись с нами</a>*/}
       </div>
     )
   }

@@ -22,6 +22,15 @@
     width: 100%;
   }
 
+  .bm-burger-button {
+    outline: none;
+    position: fixed;
+    height: 15px;
+    width: 21px;
+    left: auto;
+    top: 31px;
+  }
+
   .links {
     display: none;
   }

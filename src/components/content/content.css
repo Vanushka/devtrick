@@ -1,4 +1,4 @@
-.content {
+.content-block {
   width: 100%;
   height: 660px;
   margin: 0 auto;
@@ -15,12 +15,12 @@
   "links img";
 }
 
-.content .inside-container .text {
+.content-block .inside-container .text {
   grid-area: text;
   /* margin-top: 35px; */
 }
 
-.content .inside-container .text h1 {
+.content-block .inside-container .text h1 {
   width: 100%;
   margin: 0;
   color: #FFFFFF;
@@ -30,7 +30,7 @@
   letter-spacing: 0.03em;
 }
 
-.content .inside-container .text p {
+.content-block .inside-container .text p {
   margin: 0;
   font-family: "CeraPro-Light";
   font-size: 24px;
@@ -38,7 +38,7 @@
   color: #FFFFFF;
 }
 
-.content .inside-container .links {
+.content-block .inside-container .links {
   grid-area: links;
   display: grid;
   max-width: 38%;
@@ -47,10 +47,11 @@
   grid-template-columns: repeat(2, auto);
 }
 
-.content .inside-container .links a:first-child {
+.content-block .inside-container .links div {
   width: 213px;
   height: 60px;
   display: grid;
+  cursor: pointer;
   background: #6450FF;
   color: #ffffff;
   font-size: 16px;
@@ -60,7 +61,7 @@
   font-family: "CeraPro-Bold";
 }
 
-.content .inside-container .links a {
+.content-block .inside-container .links a {
   width: 283px;
   height: 60px;
   display: grid;
@@ -74,12 +75,12 @@
   font-family: "CeraPro-Bold";
 }
 
-.content .inside-container .images-banner {
+.content-block .inside-container .images-banner {
   width: 500px;
   grid-area: img;
   margin-top: -35px;
 }
 
-.content .inside-container .images-banner img {
+.content-block .inside-container .images-banner img {
   width: 100%;
 }

@@ -1,7 +1,11 @@
-.logos_company {
+.logos_com_container {
   background-color: #ffffff;
+  width: 100%;
+}
+.logos_company {
   width: 86.3%;
   display: grid;
+  margin-top: 45px;
   grid-template-rows: 1fr;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 16px;
@@ -10,6 +14,9 @@
 .logo_company {
   width: 100%;
   height: 16vw;
+  display: grid;
+  align-items: center;
+  justify-content: center;
   position: relative;
   font-size: 15vw;
   background: #fff;

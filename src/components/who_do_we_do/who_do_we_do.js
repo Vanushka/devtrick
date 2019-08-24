@@ -19,31 +19,33 @@ class Who_do_we_do extends React.Component {
         <div>
           <h1>Кому делаем</h1>
         </div>
-        <div className="logos_company">
-        <div className="logo_company">
-          <img src={vpbank_plus} />
-        </div>
-        <div className="logo_company">
-          <img src={bank_spb} />
-        </div>
-        <div className="logo_company">
-          <img src={pr_solution} />
-        </div>
-        <div className="logo_company">
-          <img src={neoflex} />
-        </div>
-        <div className="logo_company">
-          <img src={apptimizm} />
-        </div>
-        <div className="logo_company">
-          <img src={rossgossstrah} />
-        </div>
-        <div className="logo_company">
-          <img src={rosbank} />
-        </div>
-        <div className="logo_company">
-          <img src={nectarin} />
-        </div>
+        <div class="logos_com_container">
+          <div className="logos_company">
+            <div className="logo_company">
+              <img src={vpbank_plus} />
+            </div>
+            <div className="logo_company">
+              <img src={bank_spb} />
+            </div>
+            <div className="logo_company">
+              <img src={pr_solution} />
+            </div>
+            <div className="logo_company">
+              <img src={neoflex} />
+            </div>
+            <div className="logo_company">
+              <img src={apptimizm} />
+            </div>
+            <div className="logo_company">
+              <img src={rossgossstrah} />
+            </div>
+            <div className="logo_company">
+              <img src={rosbank} />
+            </div>
+            <div className="logo_company">
+              <img src={nectarin} />
+            </div>
+          </div>
         </div>
       </div>
     );

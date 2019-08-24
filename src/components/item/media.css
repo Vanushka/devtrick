@@ -1,0 +1,20 @@
+@media screen and (max-device-width: 767px) {
+  .product-logo {
+    width: 100%;
+    height: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-flex-pack: end;
+    justify-content: unset;
+  }
+  .item-content {
+    width: 90%;
+    margin: 0 auto;
+    grid-template-rows: unset;
+    grid-template-columns: 100%;
+  }
+  .concept {
+    width: 100%;
+    height: 100%;
+  }
+}

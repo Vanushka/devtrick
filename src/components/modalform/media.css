@@ -1,0 +1,34 @@
+@media screen and (max-device-width: 767px) {
+  .ui.modal>.content p {
+    font-size: 42px;
+    line-height: 36px;
+    text-align: center;
+    margin-top: 60px;
+  }
+  .ui.modal>.close {
+    right: 1.5rem!important;
+  }
+  .modal-inside {
+    display: -ms-grid;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .ui.form {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+  }
+  .ui.form .field {
+    width: 100%;
+  }
+  .ui.form .field:nth-child(3) {
+    margin-top: 0;
+  }
+  .ui.button {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
