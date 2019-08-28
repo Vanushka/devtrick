@@ -1,10 +1,12 @@
 .sidebar {
-  /* width: 45px; */
+  top: 205px;
+  z-index: 10;
   height: 553px;
-  margin-top: 75px;
-  grid-area: sidebar;
   display: grid;
+  margin-left: 5%;
+  position: fixed;
   justify-self: end;
+  grid-area: sidebar;
 }
 
 .sidebar .communication {

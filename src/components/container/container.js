@@ -18,13 +18,13 @@ class Container extends React.Component {
     return (
       <Routes location='hash'>
         <div className="container">
-          <Route path='/' exact component={Content} />
-          <Route path='/we_made' exact component={We_made} />
-          <Route path='/what_are_we_doing' exact component={What_are_we_doing} />
-          <Route path='/who_do_we_do' exact component={Who_do_we_do} />
-          <Route path='/blog' exact component={Blog} />
-          <Route path='/contacts' exact component={Contacts} />
-          <Route path='/we_made/:item' component={Item} />
+          <Content />
+          <We_made />
+          <What_are_we_doing />
+          <Who_do_we_do />
+          {/*<Route path='/blog' exact component={Blog} />*/}
+          <Contacts />
+          <Route path='/:item' component={Item} />
         </div>
       </Routes>
     );

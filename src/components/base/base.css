@@ -2,10 +2,10 @@
   display: grid;
   grid-template-areas:
   "header header"
-  "sidebar container"
-  "sidebar footer";
+  "container container"
+  "footer footer";
   grid-template-rows: 130px 1fr;
-  grid-template-columns: 12% 1fr;
+  grid-template-columns: 1fr;
   height: auto !important;
 }
 
@@ -15,24 +15,4 @@ a {
 
 header, footer, .sidebar{
   padding: 20px;
-}
-
-.pagination {
-  top: 46%;
-  right: 0;
-  display: grid;
-  margin-right: 5%;
-  margin-left: auto;
-  position: absolute;
-  z-index: 10;
-}
-
-.pagination .up {
-  margin-bottom: 9px;
-  margin-left: 8px;
-}
-
-.pagination .down {
-  margin-top: 6px;
-  margin-left: 8px;
 }

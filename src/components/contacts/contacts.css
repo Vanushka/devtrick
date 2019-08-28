@@ -1,11 +1,21 @@
 #contacts {
+  height: 1000px;
   position: relative;
 }
 .contacts-body {
   width: 100%;
   height: 100%;
   margin-top: 45px;
-  background: rgba(32, 31, 36, 0.74);
+  background: #ffffff;
+}
+
+#contacts .content-inside {
+  height: 100%;
+  padding: 100px 0 0;
+}
+
+#contacts .content-inside h1 {
+  color: #ffffff;
 }
 
 .text-contacts {
@@ -27,14 +37,14 @@
   font-size: 16px;
   line-height: 61px;
   text-transform: lowercase;
-  color: #939393;
+  color: #000000;
 }
 
 .first a {
   font-family: "CeraPro-Bold";
   font-size: 28px;
   line-height: 36px;
-  color: #FFFFFF;
+  color: #000000;
 }
 .second {
   grid-area: second;
@@ -46,7 +56,7 @@
   font-family: "CeraPro-Bold";
   font-size: 28px;
   line-height: 36px;
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .third {
@@ -58,12 +68,16 @@
   font-family: "CeraPro-Bold";
   font-size: 18px;
   line-height: 34px;
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .third span {
   font-family: "CeraPro";
   font-size: 18px;
   line-height: 34px;
-  color: #FFFFFF;
+  color: #000000;
+}
+
+.get_together {
+  display: none;
 }

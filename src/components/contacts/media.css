@@ -1,11 +1,13 @@
 @media screen and (max-device-width: 767px) {
   #contacts {
-    margin-top: 20px;
+    background-image: url('./img/jpg/contacts_mob_back.jpg') !important;
+    background-repeat: round;
   }
   #contacts h1 {
     margin-left: 5%;
   }
   .contacts-body {
+    margin-top: 0;
     background: none;
   }
   .text-contacts {
@@ -15,7 +17,39 @@
     grid-template-areas: "first" "second" "third";
     grid-template-columns: 90%;
   }
-  .third p {
-    margin: 0;
+  .text-contacts p {
+    color: #ffffff;
   }
+  .text-contacts .first p {
+    color: #ffffff;
+  }
+  .text-contacts .first a {
+    color: #ffffff;
+  }
+  .text-contacts .second a {
+    color: #ffffff;
+  }
+  .text-contacts .third p {
+    margin: 0;
+    color: #ffffff;
+  }
+  .text-contacts .third span {
+    color: #ffffff;
+  }
+  .get_together {
+    color: #FFFFFF;
+    display: block;
+    margin: 0 auto;
+    font-size: 34px;
+    margin-top: 70px;
+    line-height: 36px;
+    text-align: center;
+    font-family: "CeraPro-Bold";
+  }
+}
+
+@media screen and (max-device-width: 320px) {
+ .get_together {
+   margin-top: 25px;
+ }
 }

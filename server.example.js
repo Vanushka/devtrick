@@ -34,8 +34,8 @@ app.post('/contact', (req, res) => {
       port: 465,
       secure: true, // true for 465, false for other ports
       auth: {
-          user: 'YOUR_EMAIL', // generated ethereal user
-          pass: 'YOUR_PASSWORD' // generated ethereal password
+          user: '<YOUR_EMAIL>', // generated ethereal user
+          pass: '<YOUR_PASSWORD>' // generated ethereal password
       },
       tls:{
         rejectUnauthorized:false
@@ -45,8 +45,8 @@ app.post('/contact', (req, res) => {
   // setup email data with unicode symbols
   let mailOptions = {
       from: '"Сообщение от:" <YOUR_EMAIL>', // sender address
-      to: 'YOUR_EMAIL', // list of receivers
-      subject: 'Сообщение с сайта devtrick.com', // Subject line
+      to: '<YOUR_EMAIL>', // list of receivers
+      subject: 'Сообщение с сайта <YOUR_SITE>', // Subject line
       text: 'Hello world?', // plain text body
       html: output // html body
   };
@@ -55,7 +55,7 @@ app.post('/contact', (req, res) => {
       if (error) {
           return console.log(error);
       }
-      console.log('Message sent: %s', 'YOUR_EMAIL');
+      console.log('Message sent: %s', '<YOUR_EMAIL>');
       console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
       // res.render('contact', {msg: 'Спасибо, Ваша заявка принята. В скором времени наши менеджеры свяжутся с Вами.'});
   });

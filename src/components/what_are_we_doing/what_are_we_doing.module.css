@@ -1,5 +1,12 @@
 #what_are_we_doing {
-  height: 40vw;
+  height: 800px;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#what_are_we_doing .content-inside h1 {
+  color: #ffffff;
 }
 
 .examples {

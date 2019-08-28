@@ -1,5 +1,6 @@
 @media screen and (max-device-width: 767px) {
   .content-block {
+    width: 100%;
     height: 728px;
     background-image: url("img/png/main_banner_mob.png") !important;
   }
@@ -26,6 +27,9 @@
     grid-template-columns: none;
   }
   .content-block .inside-container .links a {
+    width: 100% !important;
+  }
+  .content-block .inside-container .links div {
     width: 100% !important;
   }
 }

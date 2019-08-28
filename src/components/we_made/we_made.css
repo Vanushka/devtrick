@@ -1,3 +1,11 @@
+.content-inside {
+  width: 88%;
+  right: 0;
+  margin: 0;
+  padding: 100px 0 150px;
+  margin-left: auto;
+}
+
 h1 {
   color: #000000;
   margin-top: 0;

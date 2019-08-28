@@ -2,6 +2,8 @@ import React from 'react';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 import { slide as Menu } from "react-burger-menu";
 
+import { Link, animateScroll as scroll, scrollSpy } from "react-scroll";
+
 import './header.css';
 import './white-theme.css';
 import './media.css';
@@ -20,56 +22,162 @@ class Header extends React.Component {
           }
       }
     }
+    window.addEventListener("scroll", bringmenu);
+
+    function bringmenu() {
+        if (document.documentElement.scrollTop < 130) {
+            document.getElementById("bottommenu").style.top = "-100px";
+        } else {
+            document.getElementById("bottommenu").style.top = "0";
+        }
+    }
+
+    function scrollToTop () {
+      scroll.scrollToTop();
+    };
+
     return (
       <header>
-      <div className="burger">
-        <Menu>
-          <NavLink className={
-            location.pathname === "/we_made" ? "active" : "item"
-          } to='/we_made' >Что мы сделали</NavLink>
-          <NavLink className={
-            location.pathname === "/what_are_we_doing" ? "active" : "item"
-          } to='/what_are_we_doing' >Что мы делаем</NavLink>
-          <NavLink className={
-            location.pathname === "/who_do_we_do" ? "active" : "item"
-          } to='/who_do_we_do' >Кому делаем</NavLink>
-          <NavLink className={
-            location.pathname === "/contacts" ? "active" : "item"
-          } to='/contacts' >Контакты</NavLink>
-        </Menu>
-      </div>
-      <div className="logo">
-        <NavLink to='/' >
-          <img src={logo} alt="logo" />
-        </NavLink>
-      </div>
-      <ul className="links">
-        <li>
-          <NavLink className={
-            location.pathname === "/we_made" ? "active" : "item"
-          } to='/we_made' >Что мы сделали</NavLink>
-        </li>
-        <li><NavLink className={
-          location.pathname === "/what_are_we_doing" ? "active white" : "item"
-        } to='/what_are_we_doing' >Что мы делаем</NavLink>
-        </li>
-        <li><NavLink className={
-          location.pathname === "/who_do_we_do" ? "active" : "item"
-        } to='/who_do_we_do' >Кому делаем</NavLink></li>
-        <li><NavLink className={
-          location.pathname === "/contacts" ? "active white" : "item"
-        } to='/contacts' >Контакты</NavLink></li>
-      </ul>
-      <div className="contacts_menu">
-        <span>Руководитель проектов</span>
-        <a href="mailto:hello@devtrick.com">hello@devtrick.com</a>
-        <a href="tel:+7 (996) 960-30-94">+7 (996) 960-30-94</a>
+        <div className="burger">
+          <Menu>
+            <Link
+              activeClass="active"
+              smooth={true}
+              duration= {1000}
+              to='we_made'>Порфтолио
+            </Link>
+            <Link
+              activeClass="active"
+              smooth={true}
+              duration= {1000}
+              to='what_are_we_doing'>Что мы умеем
+            </Link>
+            <Link
+              activeClass="active"
+              smooth={true}
+              duration= {1000}
+              to='who_do_we_do'>Клиенты
+            </Link>
+            <Link
+              spy={true}
+              activeClass="active"
+              smooth={true}
+              duration= {1000}
+              to='contacts'>Контакты
+            </Link>
+          </Menu>
+        </div>
+        <div className="logo">
+          <NavLink to="/">
+            <img src={logo} alt="logo" />
+          </NavLink>
+        </div>
+        <ul className="links">
+          <li>
+            <Link
+              spy={true}
+              smooth={true}
+              duration= {1000}
+              offset={-30}
+              to='we_made'>Порфтолио
+            </Link>
+          </li>
+          <li>
+            <Link
+              spy={true}
+              smooth={true}
+              duration= {1000}
+              offset={-30}
+              to='what_are_we_doing'>Что мы умеем
+            </Link>
+          </li>
+          <li>
+            <Link
+              spy={true}
+              smooth={true}
+              duration= {1000}
+              offset={-30}
+              to='who_do_we_do'>Клиенты
+            </Link>
+          </li>
+          <li>
+            <Link
+              spy={true}
+              activeClass="active"
+              smooth={true}
+              duration= {1000}
+              offset={-30}
+              to='contacts'>Контакты
+            </Link>
+          </li>
+        </ul>
+        <div className="contacts_menu">
+          <span>Руководитель проектов</span>
+          <a href="mailto:hello@devtrick.com">hello@devtrick.com</a>
+          <a href="tel:+7 (996) 960-30-94">+7 (996) 960-30-94</a>
+        </div>
+        <div className="fix-header" id="bottommenu">
+        <div className="logo">
+          <Link onClick={scrollToTop}>
+            <img src={logo} alt="logo" />
+          </Link>
+        </div>
+        <ul className="links">
+          <li>
+            <Link
+              spy={true}
+              activeClass="active"
+              smooth={true}
+              duration= {1000}
+              offset={-30}
+              to='we_made'>Порфтолио
+            </Link>
+          </li>
+          <li>
+            <Link
+              spy={true}
+              activeClass="active"
+              smooth={true}
+              duration= {1000}
+              offset={-30}
+              to='what_are_we_doing'>Что мы умеем
+            </Link>
+          </li>
+          <li>
+            <Link
+              spy={true}
+              activeClass="active"
+              smooth={true}
+              duration= {1000}
+              offset={-30}
+              to='who_do_we_do'>Клиенты
+            </Link>
+          </li>
+          <li>
+            <Link
+              spy={true}
+              activeClass="active"
+              smooth={true}
+              duration= {1000}
+              offset={-30}
+              to='contacts'>Контакты
+            </Link>
+          </li>
+        </ul>
+        <div className="contacts_menu">
+          <span>Руководитель проектов</span>
+          <a href="mailto:hello@devtrick.com">hello@devtrick.com</a>
+          <a href="tel:+7 (996) 960-30-94">+7 (996) 960-30-94</a>
+        </div>
       </div>
     </header>
     )
   }
 
   componentDidMount() {
+
+    scrollSpy.update();
+
     if (location.pathname === "/what_are_we_doing" || location.pathname === "/contacts") {
       var elementsBurger = document.getElementsByClassName('bm-burger-bars');
         for (var i = 0; i < elementsBurger.length; i++) {

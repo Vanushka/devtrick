@@ -12,6 +12,10 @@ import "slick-carousel/slick/slick-theme.css";
 import * as actions from '../../store/actions/projects';
 
 import './we_made.css';
+
+import we_made_banner_back from './img/jpg/we_made.jpg';
+
+
 import feat from './img/jpg/feat.jpg';
 import vpbank from './img/png/VPbank.png';
 import logo from './img/png/VPbankLogo.png';
@@ -39,11 +43,14 @@ import './projects.css';
 class We_made extends React.Component {
 
   navClickedHandler = (event, projectId, name) => {
-    console.log(projectId);
+    console.log(projectId, this.props.history);
     this.props.onProjectChosen(projectId);
     this.props.history.push('/we_made/' + name);
   };
   render() {
+    let backgroundImage = {
+      backgroundImage: `url(${we_made_banner_back})`,
+    };
     const projects = this.props.projects.map(prj => (
       <div
         key={prj.id}
@@ -74,32 +81,36 @@ class We_made extends React.Component {
 
     if (window.innerWidth > 768) {
       return (
-        <div id="we_made">
-          <h1>Что мы сделали</h1>
-          <div className="products">
-            {projects}
-            <a className="product submit_your_app">
-              <p>
-                <ModalExampleCloseIcon /> на проект
-              </p>
-            </a>
+        <div id="we_made" style={backgroundImage}>
+          <div className="content-inside">
+            <h1>Портфолио</h1>
+            <div className="products">
+              {projects}
+              <a className="product submit_your_app">
+                <p>
+                  <ModalExampleCloseIcon /> на проект
+                </p>
+              </a>
+            </div>
           </div>
         </div>
       );
     } else {
       return (
-        <div id="we_made">
-          <h1>Что мы сделали</h1>
-          <div className="products">
-            <Slider {...settings}>
-              {projects}
-              <a className="product submit_your_app">
-                <p>
-                  Оставить заявку <br />
-                  на проект
-                </p>
-              </a>
-            </Slider>
+        <div id="we_made" style={backgroundImage}>
+          <div className="content-inside">
+            <h1>Портфолио</h1>
+            <div className="products">
+              <Slider {...settings}>
+                {projects}
+                <a className="product submit_your_app">
+                  <p>
+                    <ModalExampleCloseIcon />
+                    на проект
+                  </p>
+                </a>
+              </Slider>
+            </div>
           </div>
         </div>
       );

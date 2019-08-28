@@ -1,6 +1,8 @@
 @media screen and (max-device-width: 767px) {
   footer {
     padding: 0;
+    height: 30px;
+    margin-top: -61px;
     justify-content: center;
   }
   footer .copyright {

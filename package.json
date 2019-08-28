@@ -30,6 +30,7 @@
     "react-router-hash-link": "^1.2.2",
     "react-scoped-styles": "^0.2.81",
     "react-scripts": "0.9.5",
+    "react-scroll": "^1.7.14",
     "react-scroll-wheel-handler": "^1.0.9",
     "react-slick": "^0.25.2",
     "react-window-size-listener": "^1.4.0",

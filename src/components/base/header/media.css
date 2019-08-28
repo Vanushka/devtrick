@@ -7,6 +7,10 @@
     grid-template-columns: 11% 35% 1fr;
   }
 
+  #bottommenu {
+    display: none !important;
+  }
+
   header .burger {
     display: block;
   }
