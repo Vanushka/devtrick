@@ -17,7 +17,7 @@ class FormSubmit extends Component {
     const cState = this.state
     const bodyStr = JSON.stringify(cState)
     const self = this
-    fetch('http://localhost:3001/contact/', {
+    fetch('http://devtrick.pro/contact/', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
