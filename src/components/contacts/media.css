@@ -1,5 +1,6 @@
 @media screen and (max-device-width: 767px) {
   #contacts {
+    height: 1000px;
     background-image: url('./img/jpg/contacts_mob_back.jpg') !important;
     background-repeat: round;
   }

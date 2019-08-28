@@ -115,7 +115,7 @@ header .contacts_menu a.white {
 }
 
 .bm-item-list a {
-  width: 160px;
+  width: fit-content;
   outline: none;
   font-family: "CeraPro";
   font-size: 20px;
