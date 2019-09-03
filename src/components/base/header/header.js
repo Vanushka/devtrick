@@ -36,6 +36,15 @@ class Header extends React.Component {
   toggleMenu () {
     this.setState(state => ({menuOpen: !state.menuOpen}))
   }
+
+  checkUrl () {
+    if (location.pathname != '/') {
+      window.location = '/';
+    } else {
+      console.log('PIDOR!');
+    }
+  }
+
   render () {
     let logo = location.pathname === "/what_are_we_doing" ? logoWhite : (location.pathname === "/contacts" ? logoWhite : logoStandart);
     function changeColor() {
@@ -80,7 +89,7 @@ class Header extends React.Component {
               activeClass="active"
               smooth={true}
               duration= {1000}
-              to='what_are_we_doing'>Что мы умеем
+              to='what_are_we_doing'>Компетенция
             </Link>
             <Link
               onClick={() => this.closeMenu()}
@@ -108,11 +117,12 @@ class Header extends React.Component {
         <ul className="links">
           <li>
             <Link
+              onClick={() => this.checkUrl()}
               spy={true}
               smooth={true}
               duration= {1000}
               offset={-30}
-              to='we_made'>Порфтолио
+              to={'we_made'}>Порфтолио
             </Link>
           </li>
           <li>
@@ -121,7 +131,7 @@ class Header extends React.Component {
               smooth={true}
               duration= {1000}
               offset={-30}
-              to='what_are_we_doing'>Что мы умеем
+              to='what_are_we_doing'>Компетенция
             </Link>
           </li>
           <li>
@@ -158,6 +168,7 @@ class Header extends React.Component {
         <ul className="links">
           <li>
             <Link
+              onClick={() => this.checkUrl()}
               spy={true}
               activeClass="active"
               smooth={true}
@@ -173,7 +184,7 @@ class Header extends React.Component {
               smooth={true}
               duration= {1000}
               offset={-30}
-              to='what_are_we_doing'>Что мы умеем
+              to='what_are_we_doing'>Компетенция
             </Link>
           </li>
           <li>

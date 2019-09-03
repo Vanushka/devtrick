@@ -18,7 +18,7 @@ class What_are_we_doing extends React.Component {
     return (
       <div id="what_are_we_doing" style={backgroundImage}>
         <div className="content-inside">
-          <h1>Что мы умеем</h1>
+          <h1>Компетенция</h1>
           <div className="examples">
             <div className="example">
               <div className="text">

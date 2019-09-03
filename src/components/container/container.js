@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BrowserRouter as Routes,  Route } from 'react-router-dom';
+import { BrowserRouter as Routes,  Route, Switch } from 'react-router-dom';
 
 import './container.css'
 
@@ -17,15 +17,16 @@ class Container extends React.Component {
   render () {
     return (
       <Routes location='hash'>
-        <div className="container">
-          <Content />
-          <We_made />
-          <What_are_we_doing />
-          <Who_do_we_do />
-          {/*<Route path='/blog' exact component={Blog} />*/}
-          <Contacts />
-          <Route path='/:item' component={Item} />
-        </div>
+        <Switch>
+          <div className="container">
+            <Route exact path={`/`} exact component={Content} />
+            <Route exact path={`/`} component={We_made} />
+            <Route exact path={`/`} component={What_are_we_doing} />
+            <Route exact path={`/`} component={Who_do_we_do} />
+            <Route exact path={`/`} component={Contacts} />
+            <Route path={`/project/:id`} exact render={({ match }) => (<Item match={match} />)} />
+          </div>
+        </Switch>
       </Routes>
     );
   }

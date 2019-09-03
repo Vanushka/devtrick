@@ -2,8 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 
-import Slider from "react-slick";
-
 import ModalExampleCloseIcon from '../modalform/modalform';
 
 import "slick-carousel/slick/slick.css";
@@ -40,23 +38,24 @@ import carryfood from './img/png/carryfood.png';
 import carryfood_logo from './img/png/carryfood_logo.png';
 
 import './projects.css';
+
 class We_made extends React.Component {
 
   navClickedHandler = (event, projectId, name) => {
-    console.log(projectId, this.props.history);
+    console.log(projectId, this.props);
     this.props.onProjectChosen(projectId);
-    this.props.history.push('/we_made/' + name);
+    // this.props.history.push('/we_made/' + name);
   };
   render() {
     let backgroundImage = {
       backgroundImage: `url(${we_made_banner_back})`,
     };
     const projects = this.props.projects.map(prj => (
-      <div
+      <NavLink
         key={prj.id}
         className={'product ' + prj.style}
-        to={'/we_made/' + prj.name}
-        onClick={() => this.navClickedHandler(event, prj.id, prj.name)}
+        to={'/project/' + prj.id}
+        // onClick={() => this.navClickedHandler(event, prj.id, prj.name)}
       >
         <div className="text">
           <p>{prj.title}</p>
@@ -66,56 +65,24 @@ class We_made extends React.Component {
         <div className="logo_product">
           <img src={prj.logo} alt="logo" />
         </div>
-      </div>
+      </NavLink>
     ));
 
-    let settings = {
-      dots: true,
-      autoplay: true,
-      arrows: false,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    };
-
-    if (window.innerWidth > 768) {
-      return (
-        <div id="we_made" style={backgroundImage}>
-          <div className="content-inside">
-            <h1>Портфолио</h1>
-            <div className="products">
-              {projects}
-              <a className="product submit_your_app">
-                <p>
-                  <ModalExampleCloseIcon /> на проект
-                </p>
-              </a>
-            </div>
+    return (
+      <div id="we_made" style={backgroundImage}>
+        <div className="content-inside">
+          <h1>Портфолио</h1>
+          <div className="products">
+            {projects}
+            <a className="product submit_your_app">
+              <p>
+                <ModalExampleCloseIcon /> на проект
+              </p>
+            </a>
           </div>
         </div>
-      );
-    } else {
-      return (
-        <div id="we_made" style={backgroundImage}>
-          <div className="content-inside">
-            <h1>Портфолио</h1>
-            <div className="products">
-              <Slider {...settings}>
-                {projects}
-                <a className="product submit_your_app">
-                  <p>
-                    <ModalExampleCloseIcon />
-                    на проект
-                  </p>
-                </a>
-              </Slider>
-            </div>
-          </div>
-        </div>
-      );
-    }
-
+      </div>
+    );
   }
 }
 

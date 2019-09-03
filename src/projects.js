@@ -1,5 +1,6 @@
 import feat from './assets/projects/img/jpg/feat.jpg';
 import vpbank from './assets/projects/img/png/VPbank.png';
+import vpbank_mobile from './assets/projects/img/png/VPbank_mobile.png';
 import logo from './assets/projects/img/png/VPbankLogo.png';
 import logo_bank from './assets/projects/img/png/bank.png';
 import moscow_bank from './assets/projects/img/png/moscow_bank.png';
@@ -8,6 +9,8 @@ import prodel_logo from './assets/projects/img/png/prodel_logo.png';
 import seagentLogo from './assets/projects/img/png/seagent-logo.png';
 import seagent from './assets/projects/img/png/seagent.png';
 import rr from './assets/projects/img/png/rr.png';
+import rr_desktop from './assets/projects/img/png/rr_desktop.png';
+import rr_mobile from './assets/projects/img/png/rr_mobile.png';
 import rr_logo from './assets/projects/img/png/rr_logo.png';
 import rr_desc from './assets/projects/img/png/rr_desc.png';
 import dfm_logo from './assets/projects/img/png/dfm_logo.png';
@@ -28,43 +31,47 @@ export const projects = [
     title: 'VPBank Vietnam',
     type: 'Мобильное приложение',
     logo: logo,
+    contept_img: vpbank_mobile,
     style: 'VpBank',
+    text: `<p>Хотите, чтобы Вашу компанию узнавали на каждом шагу? Желаете производить на клиентов WOW-эффект и внушать доверие? Тогда займитесь визуализацией бренда.<br/><br/>То есть создайте стильный впечатляющий образ, который позволит говорить с потребителями на одном языке</p>`,
     feat: false,
   },
-  {
-    id: 2,
-    name: 'spbbank',
-    title: 'Мобильная котировальная доска (Банк Санкт-Петербурга)',
-    type: 'Мобильное приложение',
-    logo: logo_bank,
-    style: 'SpbBank',
-    feat: false,
-  },
-  {
-    id: 3,
-    name: 'prodel',
-    title: 'Prodel - сервис доставки продуктов в Азербайджане',
-    type: 'Мобильное приложение',
-    logo: prodel_logo,
-    style: 'Prodel',
-    feat: false,
-  },
-  {
-    id: 4,
-    name: 'seagent',
-    title: 'SeAgent - сервис бронирования стояночных мест для яхт',
-    type: 'Мобильное приложение',
-    logo: seagentLogo,
-    style: 'Seagent',
-    feat: false,
-  },
+  // {
+  //   id: 2,
+  //   name: 'spbbank',
+  //   title: 'Мобильная котировальная доска (Банк Санкт-Петербурга)',
+  //   type: 'Мобильное приложение',
+  //   logo: logo_bank,
+  //   style: 'SpbBank',
+  //   feat: false,
+  // },
+  // {
+  //   id: 3,
+  //   name: 'prodel',
+  //   title: 'Prodel - сервис доставки продуктов в Азербайджане',
+  //   type: 'Мобильное приложение',
+  //   logo: prodel_logo,
+  //   style: 'Prodel',
+  //   feat: false,
+  // },
+  // {
+  //   id: 4,
+  //   name: 'seagent',
+  //   title: 'SeAgent - сервис бронирования стояночных мест для яхт',
+  //   type: 'Мобильное приложение',
+  //   logo: seagentLogo,
+  //   style: 'Seagent',
+  //   feat: false,
+  // },
   {
     id: 5,
     name: 'rr_mob',
     title: 'Русское Радио',
     type: 'Мобильное приложение',
     logo: rr_logo,
+    contept_img: rr_mobile,
     style: 'RusRadioMobile',
+    text: `<p>Some text</p>`,
     feat: true,
   },
   {
@@ -73,25 +80,27 @@ export const projects = [
     title: 'Русское Радио',
     type: 'Сайт',
     logo: rr_logo,
+    contept_img: rr_desktop,
     style: 'RusRadio',
+    text: `<p>Some text</p>`,
     feat: true,
   },
-  {
-    id: 7,
-    name: 'dfm_mob',
-    title: 'DFM - dance radio',
-    type: 'Мобильное приложение',
-    logo: dfm_logo,
-    style: 'DfmMobile',
-    feat: true,
-  },
-  {
-    id: 8,
-    name: 'dfm',
-    title: 'DFM - dance radio',
-    type: 'Сайт',
-    logo: dfm_logo,
-    style: 'Dfm',
-    feat: true,
-  },
+  // {
+  //   id: 7,
+  //   name: 'dfm_mob',
+  //   title: 'DFM - dance radio',
+  //   type: 'Мобильное приложение',
+  //   logo: dfm_logo,
+  //   style: 'DfmMobile',
+  //   feat: true,
+  // },
+  // {
+  //   id: 8,
+  //   name: 'dfm',
+  //   title: 'DFM - dance radio',
+  //   type: 'Сайт',
+  //   logo: dfm_logo,
+  //   style: 'Dfm',
+  //   feat: true,
+  // },
 ];

@@ -1,7 +1,10 @@
 .item-content {
+  right: 0;
+  margin: 0;
+  width: 85.5%;
   display: grid;
-  grid-gap: 3%;
-  margin-left: 63px;
+  grid-gap: 10%;
+  margin-left: auto;
   grid-template-rows: 300px 400px;
   grid-template-columns: 250px 785px;
   height: max-content;
@@ -26,10 +29,21 @@
 
 .info p {
   margin: 0;
-  font-family: "CeraPro";
+  font-family: "CeraPro-Bold";
   font-size: 28px;
   line-height: 35px;
   color: #000000;
+}
+.info .text {
+  width: 400px;
+  margin-top: 35px;
+}
+
+.info .text p {
+  font-family: "CeraPro";
+  font-size: 14px;
+  line-height: 18px;
+  color: #373737;
 }
 
 .concept {
