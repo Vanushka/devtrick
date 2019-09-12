@@ -2,8 +2,6 @@
   "name": "devtrick",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
-  "proxy": "http://localhost:8080",
   "dependencies": {
     "@ap.cx/react-fullpage": "^0.1.10-alpha",
     "@fullpage/react-fullpage": "^0.1.15",

@@ -4,17 +4,12 @@ import { projects } from '../../projects';
 import './item.css';
 import './media.css';
 
-import productLogo from './img/vpbank-plus.jpg';
-
-import contept_img from './img/vp_bank_concept.png';
-
 class Item extends React.Component {
   state = {
     currentProject: null,
   }
   componentWillMount() {
-    console.log(this.props.match.params.id, 'hui')
-    let project = projects.filter(prj => prj.id == this.props.match.params.id)[0];
+    let project = projects.filter(prj => prj.id === Number(this.props.match.params.id))[0];
     this.setState({currentProject: project});
   }
   render() {
@@ -22,7 +17,7 @@ class Item extends React.Component {
       <div id="item" className="item-content">
         <div className="product-block">
           <div className="product-logo">
-            <img src={this.state.currentProject.logo} />
+            <img src={this.state.currentProject.logo} alt="" />
           </div>
           <div className="info">
             <p>{this.state.currentProject.title}</p>
@@ -31,7 +26,7 @@ class Item extends React.Component {
           </div>
         </div>
         <div className="concept">
-          <img src={this.state.currentProject.contept_img} />
+          <img src={this.state.currentProject.contept_img} alt="" />
         </div>
       </div>
     );

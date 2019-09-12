@@ -1,10 +1,10 @@
 .ui.modal {
-  width: 90%;
+  width: 1067px;
   border-radius: 0;
 }
 
 .ui.modal>.content {
-  height: 660px;
+  height: 375px;
   background-image: url("./img/modal_back.jpg");
 }
 
@@ -16,9 +16,9 @@
 }
 
 .ui.modal>.close {
-  top: 4.5rem;
+  top: 1.5rem;
   color: #000000;
-  right: 5.5rem;
+  right: 2.5rem;
   font-size: 3.25em;
 }
 
@@ -32,9 +32,7 @@
 
 .ui.form {
   display: grid;
-  grid-template-rows: auto 1fr;
-  grid-template-columns: 300px;
-  grid-template-areas: "left right" "left right" "left right" "left right";
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .ui.form .field {
@@ -43,24 +41,11 @@
   background: #F7F7F7;
 }
 
-.ui.form .field:nth-child(1) {
-  grid-area: left;
-}
-
-.ui.form .field:nth-child(2) {
-  grid-area: right;
-}
-
 .ui.form .field:nth-child(2)>label {
   margin-top: -16px;
   font-family: "CeraPro";
   font-size: 10px;
   line-height: 16px;
-}
-
-.ui.form .field:nth-child(3) {
-  grid-area: left;
-  margin-top: 72px;
 }
 
 .ui.input input::placeholder {
@@ -102,8 +87,6 @@
 .ui.button {
   width: 283px;
   height: 60px;
-  margin-top: 146px;
-  grid-area: left;
   display: -ms-grid;
   display: grid;
   background: #6450FF;
@@ -126,5 +109,5 @@
 .modal-inside {
   display: grid;
   margin-top: 8%;
-  margin-left: 10%;
+  margin-left: 5%;
 }

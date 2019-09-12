@@ -23,7 +23,6 @@ app.post('/contact', (req, res) => {
     <h3>Контактные данные:</h3>
     <ul>
       <li>Имя: ${cForm.name}</li>
-      <li>Почта: ${cForm.email}</li>
       <li>Телефон: ${cForm.phone}</li>
     </ul>
   `;

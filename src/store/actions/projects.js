@@ -19,15 +19,3 @@ export const fetchProjectsFailed = () => {
     type: actionTypes.FETCH_PROJECTS_FAILED,
   };
 };
-// export const initProjects = () => {
-//   return dispatch => {
-//     axios
-//       .get('../../projects.json')
-//       .then(response => {
-//         dispatch(setProjects(response.data));
-//       })
-//       .catch(error => {
-//         dispatch(fetchProjectsFailed());
-//       });
-//   };
-// };

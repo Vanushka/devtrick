@@ -8,7 +8,6 @@ class FormSubmit extends Component {
     super(props)
     this.state = {
       name: '',
-      email: '',
       phone: '',
     }
   }
@@ -31,7 +30,6 @@ class FormSubmit extends Component {
       alert( data.msg )
       self.setState({
         name: '',
-        email: '',
         phone: '',
       })
     })
@@ -51,12 +49,15 @@ class FormSubmit extends Component {
     })
   }
   render() {
-    const {name, email, phone} = this.state
+    const {name, phone} = this.state
     return (
       <Form name='form' id='form' onSubmit={this.sendContact} >
         <Form.Input placeholder="Имя" name='name' value={name} onChange={this.handleInputChange} required />
-        <Form.Input label={'Телефон'} placeholder="+7(___)___-__-__" mask='+7\(999)999-99-99' maskChar='' name='phone' value={phone} onChange={this.handleInputChange} required />
-        <Form.Input placeholder="E-mail" name='email' type='email' value={email} onChange={this.handleInputChange} required />
+        <div className="required field">
+          <div className="ui input">
+            <InputMask label={'Телефон'} placeholder="+7(___)___-__-__" mask='+7\(999)999-99-99' maskChar='' name='phone' value={phone} onChange={this.handleInputChange} required />
+          </div>
+        </div>
         <Button className='Button_2' type='submit'>Отправить</Button>
       </Form>
     );

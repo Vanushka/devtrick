@@ -8,8 +8,7 @@ import './header.css';
 import './white-theme.css';
 import './media.css';
 
-import logoStandart from './img/svg/logo.svg';
-import logoWhite from './img/svg/logoWhite.svg';
+import logo from './img/svg/logo.svg';
 
 class Header extends React.Component {
   constructor (props) {
@@ -38,7 +37,7 @@ class Header extends React.Component {
   }
 
   checkUrl () {
-    if (location.pathname != '/') {
+    if (location.pathname !== '/') {
       window.location = '/';
     } else {
       console.log('PIDOR!');
@@ -46,200 +45,297 @@ class Header extends React.Component {
   }
 
   render () {
-    let logo = location.pathname === "/what_are_we_doing" ? logoWhite : (location.pathname === "/contacts" ? logoWhite : logoStandart);
-    function changeColor() {
-      if (location.pathname === "/what_are_we_doing") {
-        var elementsBurger = document.getElementsByClassName('bm-burger-bars');
-          for (var i = 0; i < elementsBurger.length; i++) {
-            elementsBurger[i].style.background = "white";
-          }
-      }
-    }
-    window.addEventListener("scroll", bringmenu);
 
     function bringmenu() {
-        if (document.documentElement.scrollTop < 130) {
+        if (document.body.scrollTop < 130) {
             document.getElementById("bottommenu").style.top = "-100px";
         } else {
             document.getElementById("bottommenu").style.top = "0";
         }
     }
 
+    window.addEventListener("scroll", bringmenu);
+
+
     function scrollToTop () {
       scroll.scrollToTop();
     };
-
-    return (
-      <header>
-        <div className="burger">
-          <Menu isOpen={this.state.menuOpen}
-            onStateChange={(state) => this.handleStateChange(state)}
-          >
-            <Link
-              onClick={() => this.closeMenu()}
-              spy={true}
-              activeClass="active"
-              smooth={true}
-              duration= {1000}
-              to='we_made'>Порфтолио
+    if (location.pathname === '/') {
+      return (
+        <header>
+          <div className="burger">
+            <Menu isOpen={this.state.menuOpen}
+              onStateChange={(state) => this.handleStateChange(state)}
+            >
+              <Link
+                onClick={() => this.closeMenu()}
+                spy={true}
+                activeClass="active"
+                smooth={true}
+                duration={1000}
+                to='portfolio'>Порфтолио
+              </Link>
+              <Link
+                onClick={() => this.closeMenu()}
+                spy={true}
+                activeClass="active"
+                smooth={true}
+                duration={1000}
+                to='competence'>Компетенция
+              </Link>
+              <Link
+                onClick={() => this.closeMenu()}
+                spy={true}
+                activeClass="active"
+                smooth={true}
+                duration={1000}
+                to='clients'>Клиенты
+              </Link>
+              <Link
+                onClick={() => this.closeMenu()}
+                spy={true}
+                activeClass="active"
+                smooth={true}
+                duration={1000}
+                to='contacts'>Контакты
+              </Link>
+            </Menu>
+          </div>
+          <div className="logo">
+            <NavLink to={"/"}>
+              <img src={logo} alt="logo" />
+            </NavLink>
+          </div>
+          <ul className="links">
+            <li>
+              <Link
+                spy={true}
+                smooth={true}
+                duration={1000}
+                offset={-30}
+                to='portfolio'>Порфтолио
+              </Link>
+            </li>
+            <li>
+              <Link
+                spy={true}
+                smooth={true}
+                duration={1000}
+                offset={-30}
+                to='competence'>Компетенция
+              </Link>
+            </li>
+            <li>
+              <Link
+                spy={true}
+                smooth={true}
+                duration={1000}
+                offset={-30}
+                to='clients'>Клиенты
+              </Link>
+            </li>
+            <li>
+              <Link
+                spy={true}
+                activeClass="active"
+                smooth={true}
+                duration={1000}
+                offset={-30}
+                to='contacts'>Контакты
+              </Link>
+            </li>
+          </ul>
+          <div className="contacts_menu">
+            <span>Руководитель проектов</span>
+            <a href="mailto:hello@devtrick.com">hello@devtrick.com</a>
+            <a href="tel:+7 (996) 960-30-94">+7 (996) 960-30-94</a>
+          </div>
+          <div className="fix-header" id="bottommenu">
+          <div className="logo">
+            <Link onClick={scrollToTop} to="">
+              <img src={logo} alt="logo" />
             </Link>
-            <Link
-              onClick={() => this.closeMenu()}
-              spy={true}
-              activeClass="active"
-              smooth={true}
-              duration= {1000}
-              to='what_are_we_doing'>Компетенция
-            </Link>
-            <Link
-              onClick={() => this.closeMenu()}
-              spy={true}
-              activeClass="active"
-              smooth={true}
-              duration= {1000}
-              to='who_do_we_do'>Клиенты
-            </Link>
-            <Link
-              onClick={() => this.closeMenu()}
-              spy={true}
-              activeClass="active"
-              smooth={true}
-              duration= {1000}
-              to='contacts'>Контакты
-            </Link>
-          </Menu>
+          </div>
+          <ul className="links">
+            <li>
+              <Link
+                spy={true}
+                activeClass="active"
+                smooth={true}
+                duration={1000}
+                offset={-30}
+                to='portfolio'>Порфтолио
+              </Link>
+            </li>
+            <li>
+              <Link
+                spy={true}
+                activeClass="active"
+                smooth={true}
+                duration={1000}
+                offset={-30}
+                to='competence'>Компетенция
+              </Link>
+            </li>
+            <li>
+              <Link
+                spy={true}
+                activeClass="active"
+                smooth={true}
+                duration={1000}
+                offset={-30}
+                to='clients'>Клиенты
+              </Link>
+            </li>
+            <li>
+              <Link
+                spy={true}
+                activeClass="active"
+                smooth={true}
+                duration={1000}
+                offset={-30}
+                to='contacts'>Контакты
+              </Link>
+            </li>
+          </ul>
+          <div className="contacts_menu">
+            <span>Руководитель проектов</span>
+            <a href="mailto:hello@devtrick.com">hello@devtrick.com</a>
+            <a href="tel:+7 (996) 960-30-94">+7 (996) 960-30-94</a>
+          </div>
         </div>
-        <div className="logo">
-          <NavLink to="/">
-            <img src={logo} alt="logo" />
-          </NavLink>
+      </header>
+      );
+    } else {
+      return (
+        <header>
+          <div className="burger">
+            <Menu isOpen={this.state.menuOpen}
+              onStateChange={(state) => this.handleStateChange(state)}
+            >
+              <NavLink
+                onClick={() => this.closeMenu()}
+                smooth
+                to='/#portfolio'>Порфтолио
+              </NavLink>
+              <NavLink
+                onClick={() => this.closeMenu()}
+                smooth
+                to='/#competence'>Компетенция
+              </NavLink>
+              <NavLink
+                onClick={() => this.closeMenu()}
+                smooth
+                to='/#clients'>Клиенты
+              </NavLink>
+              <NavLink
+                onClick={() => this.closeMenu()}
+                smooth
+                to='/#contacts'>Контакты
+              </NavLink>
+            </Menu>
+          </div>
+          <div className="logo">
+            <NavLink to={"/"}>
+              <img src={logo} alt="logo" />
+            </NavLink>
+          </div>
+          <ul className="links">
+            <li>
+              <NavLink
+                smooth
+                to='/#portfolio'>Порфтолио
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                smooth
+                to='/#competence'>Компетенция
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                smooth
+                to='/#clients'>Клиенты
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                smooth
+                to='/#contacts'>Контакты
+              </NavLink>
+            </li>
+          </ul>
+          <div className="contacts_menu">
+            <span>Руководитель проектов</span>
+            <a href="mailto:hello@devtrick.com">hello@devtrick.com</a>
+            <a href="tel:+7 (996) 960-30-94">+7 (996) 960-30-94</a>
+          </div>
+          <div className="fix-header" id="bottommenu">
+          <div className="logo">
+            <NavLink onClick={scrollToTop} to="">
+              <img src={logo} alt="logo" />
+            </NavLink>
+          </div>
+          <ul className="links">
+            <li>
+              <NavLink
+                smooth
+                to='/#portfolio'>Порфтолио
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                smooth
+                to='/#competence'>Компетенция
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                smooth
+                to='/#clients'>Клиенты
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                smooth
+                to='/#contacts'>Контакты
+              </NavLink>
+            </li>
+          </ul>
+          <div className="contacts_menu">
+            <span>Руководитель проектов</span>
+            <a href="mailto:hello@devtrick.com">hello@devtrick.com</a>
+            <a href="tel:+7 (996) 960-30-94">+7 (996) 960-30-94</a>
+          </div>
         </div>
-        <ul className="links">
-          <li>
-            <Link
-              onClick={() => this.checkUrl()}
-              spy={true}
-              smooth={true}
-              duration= {1000}
-              offset={-30}
-              to={'we_made'}>Порфтолио
-            </Link>
-          </li>
-          <li>
-            <Link
-              spy={true}
-              smooth={true}
-              duration= {1000}
-              offset={-30}
-              to='what_are_we_doing'>Компетенция
-            </Link>
-          </li>
-          <li>
-            <Link
-              spy={true}
-              smooth={true}
-              duration= {1000}
-              offset={-30}
-              to='who_do_we_do'>Клиенты
-            </Link>
-          </li>
-          <li>
-            <Link
-              spy={true}
-              activeClass="active"
-              smooth={true}
-              duration= {1000}
-              offset={-30}
-              to='contacts'>Контакты
-            </Link>
-          </li>
-        </ul>
-        <div className="contacts_menu">
-          <span>Руководитель проектов</span>
-          <a href="mailto:hello@devtrick.com">hello@devtrick.com</a>
-          <a href="tel:+7 (996) 960-30-94">+7 (996) 960-30-94</a>
-        </div>
-        <div className="fix-header" id="bottommenu">
-        <div className="logo">
-          <Link onClick={scrollToTop}>
-            <img src={logo} alt="logo" />
-          </Link>
-        </div>
-        <ul className="links">
-          <li>
-            <Link
-              onClick={() => this.checkUrl()}
-              spy={true}
-              activeClass="active"
-              smooth={true}
-              duration= {1000}
-              offset={-30}
-              to='we_made'>Порфтолио
-            </Link>
-          </li>
-          <li>
-            <Link
-              spy={true}
-              activeClass="active"
-              smooth={true}
-              duration= {1000}
-              offset={-30}
-              to='what_are_we_doing'>Компетенция
-            </Link>
-          </li>
-          <li>
-            <Link
-              spy={true}
-              activeClass="active"
-              smooth={true}
-              duration= {1000}
-              offset={-30}
-              to='who_do_we_do'>Клиенты
-            </Link>
-          </li>
-          <li>
-            <Link
-              spy={true}
-              activeClass="active"
-              smooth={true}
-              duration= {1000}
-              offset={-30}
-              to='contacts'>Контакты
-            </Link>
-          </li>
-        </ul>
-        <div className="contacts_menu">
-          <span>Руководитель проектов</span>
-          <a href="mailto:hello@devtrick.com">hello@devtrick.com</a>
-          <a href="tel:+7 (996) 960-30-94">+7 (996) 960-30-94</a>
-        </div>
-      </div>
-    </header>
-    )
+      </header>
+      );
+    }
   }
 
   componentDidMount() {
 
     scrollSpy.update();
 
-    if (location.pathname === "/what_are_we_doing" || location.pathname === "/contacts") {
+    if (location.pathname === "/competence" || location.pathname === "/contacts") {
       var elementsBurger = document.getElementsByClassName('bm-burger-bars');
         for (var i = 0; i < elementsBurger.length; i++) {
           elementsBurger[i].style.background = "white";
         }
       let links = document.getElementsByClassName('item');
-        for (var i = 0; i < links.length; i++) {
-          links[i].classList.add('white');
+        for (var k = 0; k < links.length; k++) {
+          links[k].classList.add('white');
         }
 
       let tagsH1 = document.getElementsByTagName('h1');
-      for (var i = 0; i < tagsH1.length; i++) {
-        tagsH1[i].classList.add('white');
+      for (var l = 0; l < tagsH1.length; l++) {
+        tagsH1[l].classList.add('white');
       }
 
       let contacts_menu = document.getElementsByClassName('contacts_menu')[0].children;
-      for (var i = 0; i < contacts_menu.length; i++) {
-        contacts_menu[i].classList.add('white');
+      for (var n = 0; n < contacts_menu.length; n++) {
+        contacts_menu[n].classList.add('white');
       }
     }
   }

@@ -6,7 +6,7 @@ const RouterRoot = () => {
   return (
     <Routes location='hash'>
       <div>
-        <Route exact strict path='/' component={App} />
+        <Route path='/' component={App} />
       </div>
     </Routes>
   );
