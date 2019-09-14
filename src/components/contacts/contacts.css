@@ -1,6 +1,8 @@
 #contacts {
   height: 800px;
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .contacts-body {
   width: 100%;
