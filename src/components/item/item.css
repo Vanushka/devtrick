@@ -29,6 +29,7 @@
 
 .info p {
   margin: 0;
+  margin-bottom: 5px;
   font-family: "CeraPro-Bold";
   font-size: 28px;
   line-height: 35px;

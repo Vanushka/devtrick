@@ -14,7 +14,7 @@ import './portfolio.css';
 import portfolio_banner_back from './img/jpg/portfolio.jpg';
 
 
-import feat from './img/jpg/feat.jpg';
+import feat from './img/svg/feat.svg';
 
 import './projects.css';
 
@@ -52,9 +52,7 @@ class Portfolio extends React.Component {
           <div className="products">
             {projects}
             <a className="product submit_your_app">
-              <div>
-                <ModalExampleCloseIcon /> на проект
-              </div>
+                <ModalExampleCloseIcon />
             </a>
           </div>
         </div>

@@ -11,6 +11,10 @@ import image from './img/png/phones.png';
 import background from './img/jpg/main_banner.jpg';
 
 class Content extends React.Component {
+  componentDidMount() {
+    document.querySelector('.content-block .inside-container .links div').innerHTML = "Оставить заявку";
+
+  }
   render () {
 
     let sectionStyle = {

@@ -6,7 +6,7 @@ import { Modal } from 'semantic-ui-react';
 import FormSubmit from '../formsubmit/formsubmit';
 
 const ModalExampleCloseIcon = () => (
-  <Modal trigger={<div>Оставить заявку</div>} closeIcon>
+  <Modal trigger={<div>Оставить заявку <br /> на проект</div>} closeIcon>
     <Modal.Content>
       <div className="modal-inside">
         <p>

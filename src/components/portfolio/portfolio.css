@@ -85,7 +85,10 @@ h1 {
 }
 
 .submit_your_app div {
+  height: 100%;
+  display: grid;
   color: #ffffff;
+  align-items: center;
   font-size: 28px;
   line-height: 28px;
 }

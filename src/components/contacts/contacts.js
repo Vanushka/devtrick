@@ -19,7 +19,7 @@ class Contacts extends React.Component {
             <div className="text-contacts">
               <div className="first">
                 <p>Руководитель проектов</p>
-                <a href="mailto:hello@devtrick.com">hello@devtrick.com</a>
+                <a href="mailto:hello@devtrick.pro">hello@devtrick.pro</a>
               </div>
               <div className="second">
                 <a href="tel:+7 (996) 960-30-94">+7 (996) 960-30-94</a>

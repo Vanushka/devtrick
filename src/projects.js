@@ -1,8 +1,8 @@
 import vpbank_mobile from './assets/projects/img/png/VPbank_mobile.png';
-import logo_vpbank from './assets/projects/img/png/VPbankLogo.png';
+import logo_vpbank from './assets/projects/img/svg/VPbankLogo.svg';
 import rr_desktop from './assets/projects/img/png/rr_desktop.png';
 import rr_mobile from './assets/projects/img/png/rr_mobile.png';
-import rr_logo from './assets/projects/img/png/rr_logo.png';
+import rr_logo from './assets/projects/img/svg/rr_logo.svg';
 
 export const projects = [
   {

@@ -147,7 +147,7 @@ class Header extends React.Component {
           </ul>
           <div className="contacts_menu">
             <span>Руководитель проектов</span>
-            <a href="mailto:hello@devtrick.com">hello@devtrick.com</a>
+            <a href="mailto:hello@devtrick.pro">hello@devtrick.pro</a>
             <a href="tel:+7 (996) 960-30-94">+7 (996) 960-30-94</a>
           </div>
           <div className="fix-header" id="bottommenu">
@@ -200,7 +200,7 @@ class Header extends React.Component {
           </ul>
           <div className="contacts_menu">
             <span>Руководитель проектов</span>
-            <a href="mailto:hello@devtrick.com">hello@devtrick.com</a>
+            <a href="mailto:hello@devtrick.pro">hello@devtrick.pro</a>
             <a href="tel:+7 (996) 960-30-94">+7 (996) 960-30-94</a>
           </div>
         </div>
@@ -268,7 +268,7 @@ class Header extends React.Component {
           </ul>
           <div className="contacts_menu">
             <span>Руководитель проектов</span>
-            <a href="mailto:hello@devtrick.com">hello@devtrick.com</a>
+            <a href="mailto:hello@devtrick.pro">hello@devtrick.pro</a>
             <a href="tel:+7 (996) 960-30-94">+7 (996) 960-30-94</a>
           </div>
           <div className="fix-header" id="bottommenu">
@@ -305,7 +305,7 @@ class Header extends React.Component {
           </ul>
           <div className="contacts_menu">
             <span>Руководитель проектов</span>
-            <a href="mailto:hello@devtrick.com">hello@devtrick.com</a>
+            <a href="mailto:hello@devtrick.pro">hello@devtrick.pro</a>
             <a href="tel:+7 (996) 960-30-94">+7 (996) 960-30-94</a>
           </div>
         </div>

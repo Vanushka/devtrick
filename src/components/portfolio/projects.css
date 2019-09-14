@@ -1,5 +1,5 @@
 .VpBank {
-    background-image: url('./img/png/VPbank.png');
+    background-image: url('./img/svg/VPbank.svg');
 }
 
 .SpbBank {
@@ -15,11 +15,11 @@
 }
 
 .RusRadioMobile {
-    background-image: url('./img/png/rr.png');
+    background-image: url('./img/svg/rr.svg');
 }
 
 .RusRadio {
-    background-image: url('./img/png/rr_desc.png');
+    background-image: url('./img/svg/rr_desc.svg');
 }
 
 .DfmMobile {
