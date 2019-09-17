@@ -31,7 +31,7 @@ class Content extends React.Component {
           </div>
           <div className="links">
             <ModalExampleCloseIcon />
-            <a href="#">Узнать примерную стоимость</a>
+            {/*<a href="#">Узнать примерную стоимость</a>*/}
           </div>
           <div className="images-banner">
             <img src={image} alt="" />
