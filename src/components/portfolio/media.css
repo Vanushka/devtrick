@@ -53,10 +53,8 @@
   .logo_product {
     width: 90px !important;
     height: 90px !important;
-    top: unset !important;
-    right: unset !important;
-    position: relative !important;
-    margin-left: 27px !important;
+    top: 2% !important;
+    right: 5% !important;
   }
   .submit_your_app {
     margin-top: 20px;
