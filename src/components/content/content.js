@@ -28,7 +28,6 @@ class Content extends React.Component {
         <div className="inside-container">
           <div className="text">
             <h1>Разработка мобильных приложений и web-сервисов</h1>
-            <p>аккуратно и во время</p>
           </div>
           <div className="links">
             <ModalExampleCloseIcon />

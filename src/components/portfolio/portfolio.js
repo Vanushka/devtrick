@@ -31,7 +31,7 @@ class Portfolio extends React.Component {
     const projects = this.props.projects.map(prj => (
       <NavLink
         key={prj.id}
-        className={'product ' + prj.style}
+        className={`${'product ' + prj.style} ${prj.disabled ? 'disabled' : ''}`}
         to={'/project/' + prj.id}
       >
         <div className="text">

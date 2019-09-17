@@ -3,15 +3,15 @@
 }
 
 .SpbBank {
-    background-image: url('./img/png/moscow_bank.png');
+    background-image: url('./img/svg/moscow_bank.svg');
 }
 
 .Prodel {
-    background-image: url('./img/png/prodel.png');
+    background-image: url('./img/svg/prodel.svg');
 }
 
 .Seagent {
-    background-image: url('./img/png/seagent.png');
+    background-image: url('./img/svg/seagent.svg');
 }
 
 .RusRadioMobile {
@@ -23,25 +23,25 @@
 }
 
 .DfmMobile {
-    background-image: url('./img/png/galantis.png');
+    background-image: url('./img/svg/galantis.svg');
 }
 
 .Dfm {
-    background-image: url('./img/png/dfm.png');
+    background-image: url('./img/svg/dfm.svg');
 }
 
 .MonteCarlo {
-    background-image: url('./img/png/mc.png');
+    background-image: url('./img/svg/mc.svg');
 }
 
 .MonteCarloSite {
-    background-image: url('./img/png/scachki.png');
+    background-image: url('./img/svg/scachki.svg');
 }
 
 .CVZ {
-  background-image: url('./img/png/cvz.png');
+  background-image: url('./img/svg/cvz.svg');
 }
 
 .Carryfood {
-  background-image: url('./img/png/carryfood.png');
+  background-image: url('./img/svg/carryfood.svg');
 }

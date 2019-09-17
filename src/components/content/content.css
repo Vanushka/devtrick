@@ -45,7 +45,7 @@
   display: grid;
   max-width: 38%;
   grid-gap: 15px;
-  margin-top: 78px;
+  margin-top: 140px;
   grid-template-columns: repeat(2, auto);
 }
 

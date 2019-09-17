@@ -122,7 +122,7 @@ class Header extends React.Component {
                 smooth={true}
                 duration={1000}
                 offset={-30}
-                to='competence'>Компетенция
+                to='competence'>Компетенции
               </Link>
             </li>
             <li>

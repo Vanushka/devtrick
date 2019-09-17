@@ -1,3 +1,6 @@
+.disabled {
+  pointer-events: none;
+}
 .content-inside {
   width: 88%;
   right: 0;
@@ -36,7 +39,7 @@ h1 {
 }
 
 .product .text {
-  max-width: 70%;
+  max-width: 55%;
   display: grid;
   grid-gap: 11px;
   margin-top: 20px;
@@ -62,10 +65,8 @@ h1 {
 }
 
 .logo_product {
-  margin-top: 16px;
-  margin-right: 16px;
-  width: 15%;
-  height: 15%;
+  width: 34.5%%;
+  height: 24%;
   position: absolute;
   right: 0;
   display: grid;

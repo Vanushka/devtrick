@@ -18,7 +18,7 @@ class Competence extends React.Component {
     return (
       <div id="competence" style={backgroundImage}>
         <div className="content-inside">
-          <h1>Компетенция</h1>
+          <h1>Компетенции</h1>
           <div className="examples">
             <div className="example">
               <div className="text">
