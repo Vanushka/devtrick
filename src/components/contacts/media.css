@@ -5,6 +5,8 @@
     background-repeat: round;
   }
   #contacts h1 {
+    font-size: 45px;
+    line-height: 61px;
     margin-left: 5%;
   }
   .contacts-body {
