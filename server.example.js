@@ -62,4 +62,8 @@ app.post('/contact', (req, res) => {
   res.end(JSON.stringify({msg: 'Спасибо, Ваша заявка принята. В скором времени наши менеджеры свяжутся с Вами.'}))
 });
 
+app.get('*', function (request, response) {
+  response.sendFile(path.resolve(__dirname, 'index.html'));
+});
+
 app.listen(3001, () => console.log('Server Started...'));
