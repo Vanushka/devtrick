@@ -1,0 +1,17 @@
+@media screen and (max-device-width: 767px) {
+  .personal {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 150px;
+  }
+  .personal h1 {
+    font-size: 32px !important;
+    line-height: 40px !important;
+  }
+  .text_personal {
+    width: 95%;
+  }
+  ul.personal_list li {
+    padding-left: 10px;
+  }
+}

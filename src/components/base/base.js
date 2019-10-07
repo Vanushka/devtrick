@@ -14,6 +14,7 @@ import who_do_we_do from './img/backgrounds/who_do_we_do.jpg';
 import blog from './img/backgrounds/blog.jpg';
 import contacts from './img/backgrounds/contacts.jpg';
 import contacts_mob_back from './img/backgrounds/contacts_mob_back.jpg';
+import personal_back from './img/backgrounds/black.jpg'
 
 class Base extends React.Component {
   render () {
@@ -33,9 +34,9 @@ class Base extends React.Component {
       }
     }
 
-    let pathnames = ["/we_made", "/what_are_we_doing", "/who_do_we_do", "/blog", "/contacts"]
+    let pathnames = ["/we_made", "/what_are_we_doing", "/who_do_we_do", "/blog", "/contacts", "/personal"]
 
-    let backgrounds = [we_made_banner_back, what_are_we_doing, who_do_we_do, blog, contacts];
+    let backgrounds = [we_made_banner_back, what_are_we_doing, who_do_we_do, blog, contacts, personal_back];
 
     getBackground(pathnames, backgrounds)
 

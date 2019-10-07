@@ -10,6 +10,7 @@ import Competence from '../competence/competence';
 import Clients from '../clients/clients';
 import Contacts from '../contacts/contacts';
 import Item from '../item/item';
+import Personal from '../personal/personal';
 
 
 class Container extends React.Component {
@@ -30,6 +31,7 @@ class Container extends React.Component {
           } />
 
           <Route path={`/project/:id`} component={Item} />
+          <Route path={`/personal`} component={Personal} />
         </Switch>
       </div>
     );

@@ -1,0 +1,33 @@
+.personal {
+  right: 0;
+  margin: 0;
+  width: 85.5%;
+  display: block;
+  margin-left: auto;
+  height: 100%;
+}
+
+.text_personal {
+  width: 85%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.text_personal p {
+  font-family: "CeraPro";
+  font-size: 18px;
+  line-height: 34px;
+  color: #FFFFFF;
+}
+
+ul.personal_list {
+  padding-left: 20px;
+}
+
+ul.personal_list li {
+  padding-left: 23px;
+  list-style-image: url("./img/dot.svg");
+  font-family: "CeraPro";
+  font-size: 18px;
+  line-height: 34px;
+  color: #FFFFFF;
+}

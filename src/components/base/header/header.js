@@ -9,6 +9,8 @@ import './white-theme.css';
 import './media.css';
 
 import logo from './img/svg/logo.svg';
+import logoWhite from './img/svg/logoWhite.svg';
+
 
 class Header extends React.Component {
   constructor (props) {
@@ -40,7 +42,7 @@ class Header extends React.Component {
     if (location.pathname !== '/') {
       window.location = '/';
     } else {
-      console.log('PIDOR!');
+      console.log('Error!');
     }
   }
 
@@ -237,31 +239,35 @@ class Header extends React.Component {
           </div>
           <div className="logo">
             <NavLink to={"/"}>
-              <img src={logo} alt="logo" />
+              <img src={location.pathname !== "/personal" ? logo : logoWhite} alt="logo" />
             </NavLink>
           </div>
           <ul className="links">
             <li>
               <NavLink
                 smooth
+                className="item"
                 to='/#portfolio'>Порфтолио
               </NavLink>
             </li>
             <li>
               <NavLink
                 smooth
+                className="item"
                 to='/#competence'>Компетенция
               </NavLink>
             </li>
             <li>
               <NavLink
                 smooth
+                className="item"
                 to='/#clients'>Клиенты
               </NavLink>
             </li>
             <li>
               <NavLink
                 smooth
+                className="item"
                 to='/#contacts'>Контакты
               </NavLink>
             </li>
@@ -318,7 +324,7 @@ class Header extends React.Component {
 
     scrollSpy.update();
 
-    if (location.pathname === "/competence" || location.pathname === "/contacts") {
+    if (location.pathname === "/personal") {
       var elementsBurger = document.getElementsByClassName('bm-burger-bars');
         for (var i = 0; i < elementsBurger.length; i++) {
           elementsBurger[i].style.background = "white";
