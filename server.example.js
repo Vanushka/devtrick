@@ -63,7 +63,7 @@ app.post('/contact', (req, res) => {
 });
 
 app.get('*', function (request, response) {
-  response.sendFile(path.resolve(__dirname, 'index.html'));
+  response.sendFile(path.resolve(__dirname, 'build/index.html'));
 });
 
 app.listen(3001, () => console.log('Server Started...'));
